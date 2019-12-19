@@ -1,43 +1,117 @@
-@import "vars"
-@import "fonts"
-@import "libs"
+@import './common/index.sass'
+@import './common/gem.scss'
 
-::placeholder
-	color: #666
+*
+    box-sizing: border-box
 
-::selection
-	background-color: $accent
-	color: #fff
+html, body
+    width: 100%
+
+body,
+main
+    overflow-x: hidden
 
 body
-	font-size: 16px
-	min-width: 320px
-	position: relative
-	line-height: 1.65
-	font-family: $default-font
-	overflow-x: hidden
-	color: $text
-	input, textarea
-		border: #666 1px solid
-		outline: none
-		&:focus:required:invalid
-			border-color: red
-		&:required:valid
-			border-color: green
+    display: flex
+    flex-direction: column
+    font-family: var(--main-font)
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    text-rendering: optimizeLegibility
+    &.mobile-menu-open
+        overflow: hidden
+    &.modal-active
+        overflow: hidden
 
-.img-responsive
-	display: block
-	max-width: 100%
-	height: auto
-	&.img-width
-		width: 100%
+main
+    position: relative
+    width: 100%
+    flex: 1 0 auto
 
-.text-center
-	text-align: center
+.footer
+    width: 100%
+    flex: 0 0 auto
 
-b, strong
-	font-weight: bold
+a
+    text-decoration: none
+    outline: none
 
+img
+    max-width: 100%
+    height: auto
 
+section
+    position: relative
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    visibility: hidden
 
-@import "media" // Always at the end
+.fluid-container
+    width: 100%
+    position: relative
+
+.container
+    position: relative
+    width: var(--container-width)
+    min-width: var(--container-width)
+    margin: 0 auto
+
+.row
+    display: flex
+    flex-direction: row
+
+.row-reverse
+    display: flex
+    flex-direction: row-reverse
+
+.column
+    display: flex
+    flex-direction: column
+
+.column-reverse
+    display: flex
+    flex-direction: column-reverse
+
+.s-visible,
+.xs-visible,
+.xxs-visible
+    display: none
+
+.lazy
+    opacity: 0
+    transition: opacity 0.4s ease
+    &Loaded
+         opacity: 1
+
+input
+    &::-webkit-input-placeholder,
+    &::placeholder
+        transition: all .3s
+    &:focus
+        &::-webkit-input-placeholder,
+        &::placeholder
+            color: transparent
+
+button[type='submit']
+    cursor: pointer
+
+@media only screen and (max-width : 1024px)
+
+    .s-hidden
+        display: none
+
+    .s-visible
+        display: block
+
+@media only screen and (max-width : 480px)
+
+    body
+        &.modal-active
+            position: fixed
+
+    .xxs-visible
+        display: block
+
+    .xxs-hidden
+        display: none

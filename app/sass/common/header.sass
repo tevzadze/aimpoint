@@ -1,0 +1,107 @@
+.header
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 100
+    &-container
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: gem(40) 0
+        width: gem(1400)
+        min-width: gem(1400)
+        margin: 0 auto
+
+.logo
+    display: flex
+    align-items: center
+    width: gem(171)
+    outline: none
+    text-decoration: none
+    img
+        width: 100%
+        height: auto
+
+.menu
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: gem(894)
+    &-wrap
+        margin-right: gem(25)
+
+.menu-item
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    min-height: gem(44)
+    &:after
+        position: absolute
+        content: ''
+        left: 0
+        bottom: gem(10)
+        width: 100%
+        height: 1px
+        background: var(--color-white)
+        opacity: 0
+        transition: opacity 300ms ease
+        pointer-events: none
+    &:hover
+        &:after
+            opacity: 1
+    .menu-item-arrow
+        position: absolute
+        display: none
+    &.with-children
+        padding-right: gem(16)
+        .sub-menu
+            display: flex
+        &:hover
+            .menu-item-link
+                ~ .sub-menu
+                    opacity: 1
+                    visibility: visible
+        &:after
+            width: calc(100% - #{gem(16)})
+        .menu-item-arrow
+            display: inline-block
+            width: gem(8)
+            right: 0
+
+.sub-menu
+    position: absolute
+    display: none
+    align-items: center
+    justify-content: flex-start
+    flex-direction: column
+    width: gem(160)
+    top: 0
+    padding-top: gem(60)
+    opacity: 0
+    visibility: hidden
+    transition: all 300ms ease
+
+.sub-menu-item
+    position: relative
+    display: flex
+    align-items: center
+    transition: all 300ms ease
+    &:after
+        position: absolute
+        content: ''
+        left: 0
+        bottom: 0
+        width: 100%
+        height: 1px
+        background: var(--color-white)
+        opacity: 0
+        transition: opacity 300ms ease
+        pointer-events: none
+    &:hover
+        &:after
+            opacity: 1
+    &:not(:last-child)
+        margin-bottom: gem(16)

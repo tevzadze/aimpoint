@@ -60,15 +60,6 @@ gulp.task('code', function() {
 	.pipe(browserSync.reload({ stream: true }))
 });
 
-gulp.task('fileinclude', function() {
-	gulp.src(['app/**/*.html'])
-	  .pipe(fileinclude({
-		prefix: '@@',
-		basepath: '@file'
-	  }))
-	  .pipe(gulp.dest('./'));
-});
-
 gulp.task('include', function() {
 	gulp.src(['./app/html/**/*.html'])
 	  .pipe(fileinclude({
@@ -76,7 +67,7 @@ gulp.task('include', function() {
 		basepath: '@file'
 	  }))
 	  .pipe(gulp.dest('./app'))
-	  .pipe(connect.reload());
+	  .pipe(browserSync.reload({ stream: true }))
   });
 
 // Deploy
@@ -126,7 +117,7 @@ if (gulpVersion == 3) {
 	gulp.task('watch', taskArr, function() {
 		gulp.watch('app/'+syntax+'/**/*.'+syntax+'', ['styles']);
 		gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['scripts']);
-		// gulp.watch('app/**/*.html', gulp.parallel('fileinclude'));
+		gulp.watch('app/**/*.html', gulp.parallel('include'));
 		gulp.watch('app/**/*.html', ['code']);
 		gmWatch && gulp.watch('app/img/_src/**/*', ['img']);
 	});
@@ -143,11 +134,11 @@ if (gulpVersion == 4) {
 	gulp.task('watch', function() {
 		gulp.watch('app/'+syntax+'/**/*.'+syntax+'', gulp.parallel('styles'));
 		gulp.watch(['libs/**/*.js', 'app/js/common.js'], gulp.parallel('scripts'));
-		gulp.watch('app/**/*.html', gulp.parallel('fileinclude'));
+		gulp.watch('app/**/*.html', gulp.parallel('include'));
 		gulp.watch('app/**/*.html', gulp.parallel('code'));
 		gmWatch && gulp.watch('app/img/_src/**/*', gulp.parallel('img')); // GraphicsMagick watching image sources if allowed.
 	});
-	gmWatch ? gulp.task('default', gulp.parallel('img', 'styles', 'scripts', 'browser-sync', 'include', 'watch')) 
-					: gulp.task('default', gulp.parallel('styles', 'scripts', 'browser-sync', 'include', 'watch'));
+	gmWatch ? gulp.task('default', gulp.parallel('img', 'styles', 'scripts', 'browser-sync', 'watch')) 
+					: gulp.task('default', gulp.parallel('styles', 'scripts', 'browser-sync', 'watch'));
 
 };

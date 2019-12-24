@@ -1,0 +1,17 @@
+.button
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    text-decoration: none
+    text-transform: capitalize
+    outline: none
+    transition: all 300ms ease
+    box-shadow: none
+    &-border
+        box-shadow: inset 0 0 0 1px var(--color-light-green)
+        color: var(--color-light-green) !important
+        padding: 0 gem(30)
+        height: gem(44)
+        &:hover
+            box-shadow: inset 0 0 0 3px var(--color-light-green)

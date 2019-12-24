@@ -1,8 +1,8 @@
-var syntax         = 'sass', // Syntax: sass or scss;
+var syntax             = 'sass', // Syntax: sass or scss;
 		gulpVersion    = '4'; // Gulp version: 3 or 4
 		gmWatch        = false; // ON/OFF GraphicsMagick watching "img/_src" folder (true/false). Linux install gm: sudo apt update; sudo apt install graphicsmagick
 
-var gulp          = require('gulp'),
+var gulp              = require('gulp'),
 		gutil         = require('gulp-util' ),
 		sass          = require('gulp-sass'),
 		browserSync   = require('browser-sync'),
@@ -15,7 +15,8 @@ var gulp          = require('gulp'),
 		rsync         = require('gulp-rsync'),
 		imageResize   = require('gulp-image-resize'),
 		imagemin      = require('gulp-imagemin'),
-		del           = require('del');
+		del           = require('del'),
+		fileinclude   = require('gulp-file-include');
 
 // Local Server
 gulp.task('browser-sync', function() {
@@ -55,9 +56,28 @@ gulp.task('scripts', function() {
 
 // HTML Live Reload
 gulp.task('code', function() {
-	return gulp.src('app/*.html')
+	return gulp.src('app/**/*.html')
 	.pipe(browserSync.reload({ stream: true }))
 });
+
+gulp.task('fileinclude', function() {
+	gulp.src(['app/**/*.html'])
+	  .pipe(fileinclude({
+		prefix: '@@',
+		basepath: '@file'
+	  }))
+	  .pipe(gulp.dest('./'));
+});
+
+gulp.task('include', function() {
+	gulp.src(['./app/html/**/*.html'])
+	  .pipe(fileinclude({
+		prefix: '@@',
+		basepath: '@file'
+	  }))
+	  .pipe(gulp.dest('./app'))
+	  .pipe(connect.reload());
+  });
 
 // Deploy
 gulp.task('rsync', function() {
@@ -106,7 +126,8 @@ if (gulpVersion == 3) {
 	gulp.task('watch', taskArr, function() {
 		gulp.watch('app/'+syntax+'/**/*.'+syntax+'', ['styles']);
 		gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['scripts']);
-		gulp.watch('app/*.html', ['code']);
+		// gulp.watch('app/**/*.html', gulp.parallel('fileinclude'));
+		gulp.watch('app/**/*.html', ['code']);
 		gmWatch && gulp.watch('app/img/_src/**/*', ['img']);
 	});
 	gulp.task('default', ['watch']);
@@ -122,10 +143,11 @@ if (gulpVersion == 4) {
 	gulp.task('watch', function() {
 		gulp.watch('app/'+syntax+'/**/*.'+syntax+'', gulp.parallel('styles'));
 		gulp.watch(['libs/**/*.js', 'app/js/common.js'], gulp.parallel('scripts'));
-		gulp.watch('app/*.html', gulp.parallel('code'));
+		gulp.watch('app/**/*.html', gulp.parallel('fileinclude'));
+		gulp.watch('app/**/*.html', gulp.parallel('code'));
 		gmWatch && gulp.watch('app/img/_src/**/*', gulp.parallel('img')); // GraphicsMagick watching image sources if allowed.
 	});
-	gmWatch ? gulp.task('default', gulp.parallel('img', 'styles', 'scripts', 'browser-sync', 'watch')) 
-					: gulp.task('default', gulp.parallel('styles', 'scripts', 'browser-sync', 'watch'));
+	gmWatch ? gulp.task('default', gulp.parallel('img', 'styles', 'scripts', 'browser-sync', 'include', 'watch')) 
+					: gulp.task('default', gulp.parallel('styles', 'scripts', 'browser-sync', 'include', 'watch'));
 
 };

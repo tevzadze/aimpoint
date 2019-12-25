@@ -3,3 +3,77 @@
 .hero-section
     min-height: gem(900)
     background: var(--grad-blue-dark-blue)
+    display: flex
+    align-items: center
+    &-container
+        position: static
+    &-title
+        margin-bottom: gem(20)
+        white-space: nowrap
+    &-subtitle
+        margin-bottom: gem(40)
+    &-image
+        position: absolute
+        top: gem(105)
+        left: gem(836)
+        width: gem(582)
+        height: auto
+    .text-block
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: flex-start
+        margin-top: gem(30)
+        max-width: gem(435)
+
+.home-benefits-section
+    background: var(--color-dark-blue)
+    min-width: gem(752)
+    padding-top: gem(40)
+    &-container
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: flex-start
+    &-title
+        margin-bottom: gem(60)
+
+.benefits
+    display: flex
+    align-items: flex-start
+    align-content: space-between
+    justify-content: space-around
+    flex-wrap: wrap
+    width: gem(960)
+    height: gem(444)
+
+.benefits-item
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+    text-align: center
+    width: gem(285)
+    padding: gem(84) 0 gem(15)
+    transition: background-color 300ms ease
+    &:hover
+        background: var(--color-white)
+        .benefits-item-title
+            color: var(--color-dark-blue)
+        .benefits-item-subtitle
+            color: var(--color-dark-blue)
+        .benefits-item-image
+        .button-arrow
+            color: var(--color-green)
+    &-title
+        margin-bottom: gem(8)
+        transition: color 300ms ease
+    &-subtitle
+        margin: 0 auto gem(16)
+        max-width: gem(242)
+        transition: color 300ms ease
+    &-image
+        position: absolute
+        top: gem(24)
+        width: gem(48)

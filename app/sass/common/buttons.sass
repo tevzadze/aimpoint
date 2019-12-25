@@ -24,3 +24,14 @@
             background: var(--color-light-lighten)
         &:active
             background: var(--color-light-darken)
+    &-arrow
+        padding-right: gem(17)
+        line-height: gem(32)
+        &:hover
+            .button-icon
+                transform: translateX(gem(4))
+        .button-icon
+            position: absolute
+            right: 0
+            width: gem(9)
+            transition: all 300ms ease

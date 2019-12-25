@@ -1,0 +1,94 @@
+.footer
+    display: flex
+    background: var(--color-dark-blue)
+    margin-top: -1px
+    user-select: none
+    &-container
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        padding: gem(80) 0
+        width: gem(1400)
+        min-width: gem(1400)
+        margin: 0 auto
+    .left-block
+        display: flex
+        align-items: flex-start
+        justify-content: flex-start
+        flex-direction: column
+        max-width: gem(166)
+    .right-block
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        list-style: none
+        width: gem(981)
+
+.sm-list
+    position: relative
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin: gem(38) 0 gem(40)
+    &-link
+        display: flex
+        align-items: center
+        width: 100%
+    &-icon
+        position: absolute
+        width: 100%
+        height: auto
+        transform-origin: 50% 50%
+        transition: transform 300ms ease
+        transform: none
+        backface-visibility: hidden
+    &-item
+        position: relative
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        width: gem(20)
+        &:nth-child(4)
+            width: gem(10)
+        &:hover
+            .sm-list-icon
+                transform: scale(1.2)
+
+.footer-column
+    display: inline-flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+    width: max-content
+    &-title
+        margin-bottom: gem(12)
+    &-list
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: flex-start
+        width: 100%
+        &-item
+            &:not(:last-child)
+                margin-bottom: gem(8)
+
+.footer-link
+    display: flex
+    align-items: center
+    position: relative
+    transition: transform 300ms ease
+    &:after
+        position: absolute
+        content: ''
+        left: 0
+        bottom: 0
+        width: 100%
+        height: 1px
+        background: var(--color-gray)
+        opacity: 0
+        transition: opacity 300ms ease
+        pointer-events: none
+    &:hover
+        &:after
+            opacity: 1

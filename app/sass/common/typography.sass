@@ -37,7 +37,7 @@
 	@include mixed-lbl(var(--color-white), var(--accent-font), var(--font-size-label3), var(--font-weight-7), var(--letter-spacing), var(--line-height-label-3))
 
 @mixin desc-1
-	@include mixed-lbl(var(--color-white), var(--main-font), var(--font-size-desc1), var(--font-weight-3), var(--letter-spacing), var(--line-height-desc1))
+	@include mixed-lbl(var(--color-link-water), var(--main-font), var(--font-size-desc1), var(--font-weight-3), var(--letter-spacing), var(--line-height-desc1))
 
 @mixin desc-2
 	@include mixed-lbl(var(--color-white), var(--main-font), var(--font-size-desc2), var(--font-weight-3), var(--letter-spacing), var(--line-height-desc2))
@@ -72,6 +72,8 @@ article, footer, header, nav, section, input, textarea
 
     &.title-h2
         @include title-h2
+        &.white
+            color: var(--color-white)
 
     &.title-h3
         @include title-h3

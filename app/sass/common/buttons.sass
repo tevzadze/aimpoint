@@ -1,6 +1,7 @@
 .button
     position: relative
-    display: flex
+    display: inline-flex
+    width: auto
     align-items: center
     justify-content: center
     text-decoration: none
@@ -15,3 +16,22 @@
         height: gem(44)
         &:hover
             box-shadow: inset 0 0 0 3px var(--color-light-green)
+    &-bg
+        background: var(--color-light-green)
+        height: gem(50)
+        padding: 0 gem(59)
+        &:hover
+            background: var(--color-light-lighten)
+        &:active
+            background: var(--color-light-darken)
+    &-arrow
+        padding-right: gem(17)
+        line-height: gem(32)
+        &:hover
+            .button-icon
+                transform: translateX(gem(4))
+        .button-icon
+            position: absolute
+            right: 0
+            width: gem(9)
+            transition: all 300ms ease

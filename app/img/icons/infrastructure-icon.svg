@@ -1,0 +1,20 @@
+<svg viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="additional-materials" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-310.000000, -126.000000)">
+            <g id="home---infrastructure-icon" transform="translate(304.000000, 120.000000)">
+                <rect id="Rectangle" x="0" y="0" width="48" height="48"></rect>
+                <polygon id="Path" fill="#33C8C3" fill-rule="nonzero" opacity="0.600000024" points="24.8 29 24.8 35 23.2 35 23.2 29"></polygon>
+                <polygon id="Path" fill="#33C8C3" fill-rule="nonzero" opacity="0.600000024" points="10.799 29 10.8 35 9.2 35 9.199 29"></polygon>
+                <polygon id="Path" fill="#33C8C3" fill-rule="nonzero" opacity="0.600000024" points="38.799 29 38.8 35 37.2 35 37.2 29"></polygon>
+                <path d="M17,13.8 C19.098682,13.8 20.8,12.098682 20.8,10 C20.8,7.90131795 19.098682,6.2 17,6.2 C14.901318,6.2 13.2,7.90131795 13.2,10 C13.2,12.098682 14.901318,13.8 17,13.8 Z M17,12.2 C15.7849736,12.2 14.8,11.2150264 14.8,10 C14.8,8.78497355 15.7849736,7.8 17,7.8 C18.2150264,7.8 19.2,8.78497355 19.2,10 C19.2,11.2150264 18.2150264,12.2 17,12.2 Z" id="Oval-Copy-9" fill="#FFFFFF" fill-rule="nonzero"></path>
+                <path d="M31,13.8 C33.098682,13.8 34.8,12.098682 34.8,10 C34.8,7.90131795 33.098682,6.2 31,6.2 C28.901318,6.2 27.2,7.90131795 27.2,10 C27.2,12.098682 28.901318,13.8 31,13.8 Z M31,12.2 C29.7849736,12.2 28.8,11.2150264 28.8,10 C28.8,8.78497355 29.7849736,7.8 31,7.8 C32.2150264,7.8 33.2,8.78497355 33.2,10 C33.2,11.2150264 32.2150264,12.2 31,12.2 Z" id="Oval-Copy-13" fill="#FFFFFF" fill-rule="nonzero"></path>
+                <circle id="Oval-Copy-10" stroke="#33C8C3" stroke-width="1.6" cx="24" cy="38" r="3"></circle>
+                <circle id="Oval-Copy-11" stroke="#33C8C3" stroke-width="1.6" cx="38" cy="38" r="3"></circle>
+                <circle id="Oval-Copy-12" stroke="#33C8C3" stroke-width="1.6" cx="10" cy="38" r="3"></circle>
+                <polygon id="Line" fill="#FFFFFF" fill-rule="nonzero" points="16.2 13 16.2 21 17.8 21 17.8 13"></polygon>
+                <polygon id="Line-Copy-4" fill="#FFFFFF" fill-rule="nonzero" points="30.2 13 30.2 21 31.8 21 31.8 13"></polygon>
+                <path d="M23,6.2 L25,6.2 C26.5463973,6.2 27.8,7.4536027 27.8,9 L27.8,39 C27.8,40.5463973 26.5463973,41.8 25,41.8 L23,41.8 C21.4536027,41.8 20.2,40.5463973 20.2,39 L20.2,9 C20.2,7.4536027 21.4536027,6.2 23,6.2 Z M23,7.8 C22.3372583,7.8 21.8,8.3372583 21.8,9 L21.8,39 C21.8,39.6627417 22.3372583,40.2 23,40.2 L25,40.2 C25.6627417,40.2 26.2,39.6627417 26.2,39 L26.2,9 C26.2,8.3372583 25.6627417,7.8 25,7.8 L23,7.8 Z" id="Rectangle-Copy-4" fill="#FFFFFF" fill-rule="nonzero" transform="translate(24.000000, 24.000000) rotate(-270.000000) translate(-24.000000, -24.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -28,8 +28,8 @@
 
 .home-benefits-section
     background: var(--color-dark-blue)
-    min-width: gem(752)
-    padding-top: gem(40)
+    min-height: gem(752)
+    padding-top: gem(60)
     &-container
         display: flex
         flex-direction: column
@@ -64,6 +64,8 @@
         .benefits-item-subtitle
             color: var(--color-dark-blue)
         .benefits-item-image
+            .icon-path
+                fill: var(--color-dark-blue)
         .button-arrow
             color: var(--color-green)
     &-title
@@ -77,3 +79,140 @@
         position: absolute
         top: gem(24)
         width: gem(48)
+        .icon-path
+            fill: var(--color-white)
+            transition: fill 300ms ease
+
+.partners-section
+    position: relative
+    padding-top: gem(160)
+    min-height: gem(803)
+    &-title
+        max-width: gem(550)
+        margin-bottom: gem(80)
+    &-bg
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: gem(890)
+        background: var(--color-sapphire)
+        pointer-events: none
+        z-index: -1
+
+.partners
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    flex-direction: column
+    &-item
+        position: relative
+        display: flex
+        align-items: center
+        padding-left: gem(60)
+        opacity: 0.6
+        cursor: pointer
+        transition: all 300ms ease
+        &:not(:last-child)
+            margin-bottom: gem(48)
+        &:hover
+            opacity: 1
+            &:before
+                transform: scale(1.5)
+            .partners-item-image 
+                ~ .partners-item-card
+                    opacity: 1
+                    visibility: visible
+        &:before
+            position: absolute
+            content: ''
+            left: 0
+            width: gem(8)
+            height: gem(8)
+            transform-origin: 50% 50%
+            transition: all 300ms ease
+            background: var(--color-medium-turquoise)
+            border-radius: 50%
+        &-card
+            position: absolute
+            display: flex
+            align-items: flex-start
+            justify-content: flex-start
+            flex-direction: column
+            top: gem(-44)
+            left: gem(408)
+            background: var(--color-medium-turquoise)
+            width: gem(487)
+            height: gem(277)
+            opacity: 0
+            visibility: hidden
+            transition: all 300ms ease
+            padding: gem(48) gem(40)
+            &-head
+                display: flex
+                align-items: center
+                justify-content: space-between
+                width: 100%
+                min-height: gem(50)
+                margin-bottom: gem(20)
+                span
+                    text-transform: uppercase
+            &-subtitle
+                margin-bottom: gem(40)
+                max-width: gem(316)
+
+
+.analytic-tools-section
+    padding: gem(160) 0
+    &-title
+        max-width: gem(480)
+
+.tools
+    position: relative
+    display: flex
+    align-items: flex-start
+    align-content: space-between
+    justify-content: flex-start
+    flex-wrap: wrap
+    width: gem(744)
+    height: gem(548)
+    left: gem(284)
+    transform-style: preserve-3d
+    perspective: 1000
+    &-item
+        position: relative
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        height: gem(125)
+        padding: 0 gem(34)
+        border-radius: gem(2)
+        background: var(--color-white)
+        box-shadow: 0 0 0 1px var(--color-pale-turquoise)
+        transform-origin: 50% 50%
+        transition: all 300ms 0ms ease
+        &:hover
+            box-shadow: 24px 32px 70px -8px var(--color-shadow)
+            transform: translateZ(gem(5))
+        &:nth-child(odd)
+            margin-right: gem(16)
+        &:nth-child(1)
+            padding: 0 gem(77)
+            left: gem(204)
+        &:nth-child(2)
+            padding: 0 gem(58)
+            left: gem(204)
+        &:nth-child(3)
+            padding: 0 gem(96)
+        &:nth-child(4)
+            padding: 0 gem(88) 0 gem(77)
+        &:nth-child(5)
+            padding: 0 gem(55)
+            left: gem(102)
+        &:nth-child(6)
+            padding: 0 gem(77)
+            left: gem(102)
+        &:nth-child(7)
+            padding: 0 gem(71)
+            margin-right: 0
+            left: gem(226)

@@ -1,0 +1,104 @@
+.header-container-white
+	a.desc-2
+		color: #04204D
+	.menu-item-arrow
+		fill: #000
+.contact_main
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: row
+	overflow: hidden
+
+	.contact_main_part_one
+		width: 100%
+		background: var( --color-light-gray)
+		padding-top: gem(280)
+		
+		padding-bottom: gem(500)
+		h1
+			color: #020F30
+			font-family: var(--accent-font)
+			padding-left: gem(200)
+		p
+			color: #04102D
+			width: gem(657)
+			position: relative
+			top: gem(20)
+			padding-left: gem(200)
+		img
+			position: absolute
+			width: gem(384)
+			bottom: gem(14)
+			left: gem(-300)
+	.contact_main_part_two
+		width: 100%
+		padding-top: gem(268)
+		.contact-form
+			margin-left: gem(120)
+			form
+				label
+					span
+						font-size: gem(12)
+						color: #8193A1
+						padding-bottom: gem(8)
+				.double-input , .solo-input
+					display: -webkit-flex
+					display: -moz-flex
+					display: -ms-flex
+					display: -o-flex
+					display: flex
+					flex-direction: row
+					label
+						display: -webkit-flex
+						display: -moz-flex
+						display: -ms-flex
+						display: -o-flex
+						display: flex
+						flex-direction: column
+						margin-top: gem(20)
+						input, textarea
+							border: 1px solid #C7D4DE
+							border-radius: gem(2)
+							width: 100%
+							font-size: gem(18)
+							color: #04102D
+							padding: gem(10) gem(16) gem(8) gem(16)
+							transition: all 0.3s ease
+							&::-webkit-input-placeholder, &::placeholder
+								font-size: gem(14)
+							&:focus
+								border: 1px solid #04102D
+								outline: none
+								transition: all 0.3s ease
+						
+
+				.double-input
+					label
+						input
+							margin-right: gem(20)
+							width: gem(232)
+				.solo-input
+					label
+						input
+							width: gem(484)
+						textarea
+							width: gem(484)
+							resize: none
+							height: gem(112)
+					.submit-button
+						margin-top: gem(40)
+						padding: gem(0) gem(47) gem(0) gem(53)
+						border-radius: 2px
+
+						&:hover
+							img
+								transform: translateX(gem(4))
+						img
+							width: gem(8)
+							margin-left: gem(14)
+							transition: all 0.3s ease
+.footer-contact
+	margin-top: 0

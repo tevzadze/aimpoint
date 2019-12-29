@@ -27,6 +27,7 @@
 	},
 	"dependencies": {
 		"npm-check-updates": "^4.0.1",
-		"reset-css": "^5.0.1"
+		"reset-css": "^5.0.1",
+		"slick-carousel": "^1.8.1"
 	}
 }

@@ -1,0 +1,146 @@
+.our-tema-main
+	overflow: hidden
+	.our-team-top
+		display: flex
+		flex-direction: column
+		align-items: center
+		margin-top: gem(240)
+		margin-bottom: gem(380)
+		h1
+			color: #020F30
+			
+			font-size: gem(56)
+
+		p
+			color: #04102D
+			margin-top: gem(20)
+			width: gem(683)
+			
+
+	.our-team-content
+		position: relative
+		
+		display: flex
+		flex-direction: column
+		align-items: center
+		background: var(--color-light-gray)
+		padding-bottom: gem(80)
+		.our-team-pattern-left
+			position: absolute
+			left: gem(-303)
+			top: gem(120)
+			width: gem(384)
+		.our-team-pattern-right
+			position: absolute
+			right: gem(-110)
+			bottom: gem(340)
+			width: gem(384)
+		.our-team-container
+			display: flex
+			flex-direction: row
+			&:nth-child(1)
+				margin-top: gem(-317)
+
+			.our-team-cart
+				margin: gem(0) gem(11)
+				margin-bottom: gem(67)
+				width: gem(385)
+				
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				flex-direction: column
+				box-shadow: 0px 8px 60px rgba(41, 47, 83, 0.170536)
+				border-radius: 2px
+				
+				&:nth-child(1)
+					margin-left: gem(0)
+				&:nth-child(3)
+					margin-right: gem(0)
+				p
+					color: #04102D
+				.our-team-cart-info-p-hidden
+					width: gem(250)
+					margin-right: (32)
+					margin-top: gem(12)
+				h3
+					color: #020F30
+				transition: all 0.3s ease
+				
+				.our-team-cart-photo
+					height: gem(317)
+					overflow: hidden
+					
+					img
+						width: 100%
+						
+						
+				.our-team-cart-info
+					padding: gem(20) gem(32) gem(20) gem(32)
+					background: #fff
+					cursor: pointer
+					z-index: 9
+					position: relative
+					
+					&:hover
+				
+						img
+							right: gem(28)
+					img
+						width: gem(16)
+						float: right
+						right: gem(32)
+						
+						transition: all 0.3s ease 
+						position: absolute
+						bottom: gem(28)
+					.our-team-cart-info-p-hidden
+						display: none
+						transition: all 0.3s ease
+			.our-team-cart-small
+				width: gem(284)
+			.our-team-cart-active
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+
+				flex-direction: row
+				transition: all 0.3s ease
+				width: gem(588)
+				.our-team-cart-photo
+					height: 100%
+					flex-grow: 1
+					// padding-bottom: gem(13)
+					
+					img
+						margin-top: gem(0)
+						height: 100%
+						
+				.our-team-cart-info
+					padding-bottom: gem(0)
+					
+					// margin-bottom: gem(13)
+					img
+						transform: rotate(-180deg)
+					.our-team-cart-info-p-hidden
+						display: block
+.our_team_setion_two
+	background: var(--color-dark-blue)
+	display: flex
+	flex-direction: column
+	align-items: center
+	width: 100%
+	text-align: center
+	padding-top: gem(160)
+
+	padding-bottom: gem(120)
+	h2
+
+		color: #fff
+		width: gem(722)
+		line-height: gem(56)
+		margin-bottom: gem(40)

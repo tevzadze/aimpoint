@@ -69,15 +69,19 @@ article, footer, header, nav, section, input, textarea
 
     &.title-h1
         @include title-h1
-
+        &.black
+            color: var(--color-dark-grey)
     &.title-h2
         @include title-h2
         &.white
             color: var(--color-white)
+        &.black
+            color: var(--color-dark-grey)
 
     &.title-h3
         @include title-h3
-
+        &.black
+            color: var(--color-dark-blue)
     &.label-1
         @include label-1
 
@@ -89,10 +93,18 @@ article, footer, header, nav, section, input, textarea
 
     &.desc-1
         @include desc-1
-
+        &.black
+            color: var(--color-dark-grey)
+            opacity: var(--opacity-08)
+        &.white
+            color: var(--color-white)
     &.desc-2
         @include desc-2
-
+        &.black
+            color: var(--color-dark-blue)
+        &.white
+            color: var(--color-white)
+       
     &.desc-3
         @include desc-3
         &.white

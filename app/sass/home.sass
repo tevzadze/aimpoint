@@ -113,12 +113,16 @@
         opacity: 0.6
         cursor: pointer
         transition: all 300ms ease
+        user-select: none
         &:not(:last-child)
             margin-bottom: gem(48)
-        &:hover
+        // &:hover,
+        &.active
             opacity: 1
             &:before
                 transform: scale(1.5)
+            &:after
+                transform: scaleX(1)
             .partners-item-image 
                 ~ .partners-item-card
                     opacity: 1
@@ -133,6 +137,16 @@
             transition: all 300ms ease
             background: var(--color-medium-turquoise)
             border-radius: 50%
+        &:after
+            position: absolute
+            content: ''
+            left: gem(363)
+            width: gem(62)
+            height: gem(1)
+            transition: all 300ms ease
+            transform-origin: 0 50%
+            background: var(--color-white)
+            transform: scaleX(0)
         &-card
             position: absolute
             display: flex
@@ -147,7 +161,7 @@
             opacity: 0
             visibility: hidden
             transition: all 300ms ease
-            padding: gem(48) gem(40)
+            padding: gem(40) gem(40) gem(48)
             &-head
                 display: flex
                 align-items: center
@@ -160,6 +174,8 @@
             &-subtitle
                 margin-bottom: gem(40)
                 max-width: gem(316)
+        &-image
+            pointer-events: none
 
 
 .analytic-tools-section

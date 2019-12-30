@@ -5,6 +5,17 @@
     left: 0
     width: 100%
     z-index: 100
+    &.black
+        .logo-triangle
+            fill: var(--color-green-logo)
+        .logo-text
+            fill: var(--color-blue)
+        .logo-planes
+            fill: var(--color-blue)
+        .menu-item-link,
+        .sub-menu-item-link
+            color: var(--color-sapphire2) !important
+
     &-container
         display: flex
         align-items: center
@@ -20,9 +31,15 @@
     width: gem(171)
     outline: none
     text-decoration: none
-    img
+    &-image
         width: 100%
         height: auto
+    &-triangle
+        fill: var(--color-white)
+    &-text
+        fill: var(--color-white)
+    &-planes
+        fill: var(--color-green-logo)
 
 .menu
     display: flex

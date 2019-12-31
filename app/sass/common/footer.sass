@@ -118,3 +118,53 @@
     &:hover
         &:after
             opacity: 1
+
+@media all and (max-width: 1024px)
+
+    .footer-section
+        padding: gem(80) 0
+        min-height: unset
+        .text-block
+            max-width: 100%
+        &-title
+            margin-bottom: gem(24)
+        &-subtitle
+            margin-bottom: gem(64)
+        &-image
+            display: none
+
+    .footer
+        margin-top: -1px
+        .logo
+            order: 2
+            padding-top: gem(40)
+            border-top: 1px solid var(--color-medium-turquoise-op02)
+            margin-top: gem(60)
+        &-container
+            justify-content: center
+            flex-wrap: wrap
+            padding: 0 0 gem(80)
+            width: gem(335)
+            min-width: gem(335)
+        .left-block
+            order: 2
+            align-items: center
+            max-width: gem(166)
+        .right-block
+            order: 1
+            align-items: flex-start
+            justify-content: space-between
+            align-content: space-between
+            flex-wrap: wrap
+            width: 100%
+            height: gem(533)
+            margin-bottom: gem(60)
+
+    .sm-list
+        order: 3
+        width: gem(121)
+        margin: gem(22) auto 0 
+        min-height: gem(20)
+
+    .footer-column
+        flex-basis: gem(160)

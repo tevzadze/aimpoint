@@ -121,3 +121,45 @@
             opacity: 1
     &:not(:last-child)
         margin-bottom: gem(16)
+
+.hamburger
+    position: relative
+    display: none
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: gem(44)
+    height: gem(44)
+    cursor: pointer
+    left: gem(6)
+    span
+        display: inline-flex
+        align-items: center
+        background: var(--color-white)
+        height: 2px
+    .chop
+        width: gem(32)
+        margin-bottom: gem(4)
+    .bread
+        width: gem(24)
+        margin-left: gem(8)
+
+@media all and (max-width: 1024px)
+
+    .hamburger
+        display: flex
+
+    .header
+        &-container
+            padding: gem(20) 0
+            width: gem(335)
+            min-width: gem(335)
+            > .button
+                display: none
+
+    .logo
+        width: gem(145)
+
+    .menu
+        &-wrap
+            display: none

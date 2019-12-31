@@ -96,7 +96,30 @@ input , textarea
 
 button[type='submit']
     cursor: pointer
-
+.text_and_photo_block
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    &.photo_block_right
+        justify-content: flex-end
+    .photo_left
+        img
+            &:nth-child(2)
+                position: absolute
+                z-index: 1
+                width: gem(384)
+            &:nth-child(1)
+                position: relative
+                z-index: 2
+                box-shadow: 0px 8px 60px rgba(41, 47, 83, 0.170536)
+    .content_right
+        margin-left: gem(226)   
+        p
+            margin-top: gem(20)
+    .content_left
+        margin-right: gem(226)
+        p
+            margin-top: gem(20)
 @media only screen and (max-width : 1024px)
 
     .s-hidden
@@ -117,9 +140,11 @@ button[type='submit']
     .xxs-hidden
         display: none
 
+
 @import './home.sass'
 @import './about.sass'
 @import './contact_us.sass'
 @import './customer.sass'
 @import './our_team.sass'
 @import './smartcare.sass'
+@import './why-aimpoint.sass'

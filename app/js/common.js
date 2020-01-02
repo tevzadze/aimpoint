@@ -25,6 +25,42 @@ $(function() {
 	}
 	initPartnersTabs(true);
 
+	// home mobile industries slider and stuff start
+	let sliderInited = false;
+	function setupIndustriesSlider(matches) {
+		if (matches && !sliderInited) {
+			$('.i-categories').slick({
+				accessibility: true,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				autoplaySpeed: 4000,
+				dots: true,
+				speed: 750,
+				arrows: false,
+				autoplay: true,
+			});
+			sliderInited = true;
+		} else if(!matches && sliderInited) {
+			$('.i-categories').slick('unslick');
+			sliderInited = false;
+		}
+	}
+	
+	function matchQueryEnable() {
+		if (!window.matchMedia) {
+			return;
+		}
+		const query = '(any-pointer: coarse) and (max-width: 1024px) and (any-hover: none)'
+
+		const doSwitch = ({ matches }) => setupIndustriesSlider(matches);
+	
+		const mQuery = window.matchMedia(query);
+		mQuery.addListener(doSwitch);
+		doSwitch(mQuery);
+	}
+	matchQueryEnable();
+	// home mobile industries slider and stuff end
+
 	$('.customer-success-slider').slick({
 		accessibility: true,
 		slidesToShow: 3,
@@ -34,6 +70,15 @@ $(function() {
 		speed: 750,
 		arrows: false,
 		autoplay: true,
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+				}
+			},
+		],
 	});
 
 	$('.our-team-cart').children('.our-team-cart-info').click(function () {

@@ -534,6 +534,8 @@
         padding: gem(68) 0 gem(20)
         &:not(:last-child)
             margin-bottom: gem(20)
+        &-title
+            font-weight: var(--font-weight-7) !important
         &-subtitle
             margin: 0 auto gem(12)
             max-width: 100%
@@ -548,7 +550,7 @@
         &-title
             text-align: center
             max-width: gem(292)
-            margin: 0 auto gem(100)
+            margin: 0 auto gem(40)
         &-left-block
             width: 100%
             margin: gem(40) auto 0 0
@@ -556,8 +558,8 @@
         &-right-block
             order: 1
             display: flex
-            align-items: center
-            justify-content: flex-start
+            align-items: flex-start
+            justify-content: center
             width: 100%
 
     .industries-title
@@ -598,78 +600,78 @@
                 .industries-item-image
                     width: gem(92)
 
-    // .i-categories
-    //     display: flex
-    //     align-items: flex-start
-    //     justify-content: flex-start
-    //     flex-direction: column
-    //     width: gem(589)
-    //     margin-bottom: gem(20)
-    //     &-desc
-    //         margin-left: gem(80)
-    //         width: gem(589)
-    //         span
-    //             font-weight: 700
-    //     &-item
-    //         display: flex
-    //         align-items: flex-start
-    //         width: 100%
-    //         cursor: pointer
-    //         &-content
-    //             position: relative
-    //             display: flex
-    //             flex-direction: column
-    //             align-items: flex-start
-    //             justify-content: center
-    //             width: 100%
-    //             height: gem(96)
-    //             padding: 0 gem(40)
-    //             transition: all 300ms ease
-    //             &:after
-    //                 position: absolute
-    //                 content: ''
-    //                 top: 0
-    //                 left: 0
-    //                 width: 100%
-    //                 height: 100%
-    //                 transition: all 300ms ease
-    //                 border-radius: gem(2)
-    //                 background: var(--color-white)
-    //                 box-shadow: 0 0 0 1px var(--color-pale-turquoise)
-    //                 z-index: -1
-    //                 pointer-events: none
-    //                 transform-origin: 0 100%
-    //         &:not(:last-child)
-    //             margin-bottom: gem(20)
-    //         &:hover
-    //             .i-categories-item-content
-    //                 transform: translateX(gem(-80))
-    //                 &:after
-    //                     box-shadow: gem(24) gem(32) gem(70) gem(-8) var(--color-shadow)
-    //                     transform: scaleY(1.82)
-    //             .i-categories-item-title
-    //                 transform: translateY(gem(-40))
-    //                 color: var(--color-dark-blue)
-    //             .i-categories-item-button
-    //                 display: inline-flex
-    //                 opacity: 1
-    //                 transform: translateY(gem(-40))
-    //             .i-categories-item-image
-    //                 opacity: 1
-    //                 transform: translateY(gem(-24))
-    //                 transition: all 300ms 100ms ease
-    //         &-title
-    //             margin-bottom: gem(8)
-    //             transform: translateY(gem(14))
-    //             transition: all 300ms ease
-    //         &-button
-    //             opacity: 0
-    //         &-image
-    //             position: absolute
-    //             width: gem(297)
-    //             bottom: 0
-    //             right: gem(27)
-    //             opacity: 0
-    //             transition: all 200ms 0ms ease
-    //             transform: translateY(gem(-40))
-    //             pointer-events: none
+    .i-categories
+        position: relative
+        display: flex
+        align-items: flex-start
+        justify-content: center
+        flex-direction: row
+        width: 100vw
+        margin: 0 gem(-40)
+        .slick-track
+            padding-top: gem(110)
+        .slick-list
+            height: gem(364)
+        .slick-dots
+            bottom: gem(25)
+        &-desc
+            margin: gem(20) auto 0
+            width: 100%
+            text-align: center
+        &-item
+            justify-content: center
+            width: 100%
+            outline: none
+            margin: 0 gem(40)
+            &-content
+                position: relative
+                justify-content: flex-start
+                align-items: center
+                height: gem(183)
+                padding: gem(79) 0 0
+                transform: none !important
+                &:after
+                    box-shadow: gem(0) gem(16) gem(48) gem(-4) var(--color-shadow)
+                    transform: none !important
+            &:not(:last-child)
+                margin-bottom: 0
+            &-title
+                margin-bottom: gem(16)
+                transform: none !important
+                text-align: center
+            &-button
+                opacity: 1 !important
+                transform: none !important
+            &-image
+                position: absolute
+                width: gem(207)
+                bottom: gem(118)
+                right: auto
+                margin: 0 auto gem(14)
+                opacity: 1
+                transform: none !important
+
+    .customer-success-section
+        padding: gem(40) 0 gem(102)
+        min-height: unset
+        &-title
+            margin-bottom: gem(12)
+        &-link
+            margin-bottom: gem(40)
+
+    .customer-success-slider
+        width: 100vw
+        margin: 0 gem(-45)
+        .slick-list
+            height: gem(380)
+
+    .customer-success-slide
+        width: 100%
+        margin: 0 gem(44)
+        box-shadow: gem(4) gem(8) gem(24) gem(-8) var(--color-shadow2)
+        &-content
+            width: gem(262)
+            padding: gem(16) gem(12)
+        &-text
+            margin-bottom: gem(12)
+            line-height: gem(24) !important

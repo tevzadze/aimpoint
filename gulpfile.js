@@ -45,8 +45,9 @@ gulp.task('styles', function() {
 // JS
 gulp.task('scripts', function() {
 	return gulp.src([
-		'app/libs/gsap-public/src/gsap-core.js',
 		'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/gsap-public/src/gsap-core.js',
+		
 		'app/libs/slick/slick.min.js',
 		'app/js/common.js', // Always at the end
 		])

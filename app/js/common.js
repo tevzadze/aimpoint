@@ -11,7 +11,7 @@ $(function() {
 				if (index === 0) {
 					partner.classList.add('active');
 				}
-				function addClassToActive() {
+				const addClassToActive = () => {
 					partners.forEach(el => { el.classList.remove('active'); })
 					partner.classList.add('active');
 				}
@@ -26,9 +26,9 @@ $(function() {
 	initPartnersTabs(true);
 
 	// home mobile industries slider and stuff start
-	let sliderInited = false;
-	function setupIndustriesSlider(matches) {
-		if (matches && !sliderInited) {
+	let sliderIndusInited = false;
+	function setupIndusSlider(matches) {
+		if (matches && !sliderIndusInited) {
 			$('.i-categories').slick({
 				accessibility: true,
 				slidesToShow: 1,
@@ -39,26 +39,51 @@ $(function() {
 				arrows: false,
 				autoplay: true,
 			});
-			sliderInited = true;
-		} else if(!matches && sliderInited) {
+			sliderIndusInited = true;
+		} else if(!matches && sliderIndusInited) {
 			$('.i-categories').slick('unslick');
-			sliderInited = false;
+			sliderIndusInited = false;
+		}
+	}
+
+	// home mobile partners slider init
+	let sliderPartnersInited = false;
+	function setupPartnersSlider(matches) {
+		if (matches && !sliderPartnersInited) {
+			$('.partners-section .partners').slick({
+				accessibility: true,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				autoplaySpeed: 4000,
+				dots: true,
+				speed: 750,
+				arrows: false,
+				// autoplay: true,
+			});
+			sliderPartnersInited = true;
+		} else if(!matches && sliderPartnersInited) {
+			$('.partners-section .partners').slick('unslick');
+			sliderPartnersInited = false;
 		}
 	}
 	
-	function matchQueryEnable() {
+	// mobile and tablet query
+	const query = '(any-pointer: coarse) and (max-width: 1024px) and (any-hover: none)';
+	function matchQueryEnable(query) {
 		if (!window.matchMedia) {
 			return;
 		}
-		const query = '(any-pointer: coarse) and (max-width: 1024px) and (any-hover: none)'
 
-		const doSwitch = ({ matches }) => setupIndustriesSlider(matches);
+		const doSwitch = ({ matches }) => {
+			setupIndusSlider(matches);
+			setupPartnersSlider(matches);
+		};
 	
 		const mQuery = window.matchMedia(query);
 		mQuery.addListener(doSwitch);
 		doSwitch(mQuery);
 	}
-	matchQueryEnable();
+	matchQueryEnable(query);
 	// home mobile industries slider and stuff end
 
 	$('.customer-success-slider').slick({

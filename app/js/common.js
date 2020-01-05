@@ -118,5 +118,17 @@ $(function() {
 			$('.our-team-cart-small').removeClass('our-team-cart-small');
 		}
 	});
+	$('.smartcare-slick-carousel').slick({
+		centerMode: true,
+		centerPadding: '0px',
+		slidesToShow: 3,
+		infinite: true,
+		autoplaySpeed: 4000,
+		dots: true,
+		speed: 750,
+		arrows: false,
+		autoplay: true,
+		
+	});
 
 });

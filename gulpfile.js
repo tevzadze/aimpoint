@@ -17,6 +17,7 @@ var gulp              = require('gulp'),
 		imagemin      = require('gulp-imagemin'),
 		del           = require('del'),
 		fileinclude   = require('gulp-file-include');
+		babel         = require('gulp-babel');
 
 // Local Server
 gulp.task('browser-sync', function() {
@@ -25,7 +26,7 @@ gulp.task('browser-sync', function() {
 			baseDir: 'app'
 		},
 		notify: false,
-		// open: false,
+		open: false,
 		// online: false, // Work Offline Without Internet Connection
 		// tunnel: true, tunnel: "projectname", // Demonstration page: http://projectname.localtunnel.me
 	})
@@ -51,6 +52,7 @@ gulp.task('scripts', function() {
 		'app/js/common.js', // Always at the end
 		], { allowEmpty: true })
 	.pipe(concat('scripts.min.js'))
+	.pipe(babel())
 	// .pipe(uglify()) // Mifify js (opt.)
 	.pipe(gulp.dest('app/js'))
 	.pipe(browserSync.reload({ stream: true }))

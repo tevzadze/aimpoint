@@ -127,8 +127,17 @@ $(function() {
 		dots: true,
 		speed: 750,
 		arrows: false,
-		autoplay: true,
-		
+		autoplay: false,
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					
+				}
+			},
+		],
 	});
 
 });

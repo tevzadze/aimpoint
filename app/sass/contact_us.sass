@@ -103,3 +103,41 @@
 							transition: all 0.3s ease
 .footer-contact
 	margin-top: 0
+@media all and (max-width: 1024px)
+	.footer-contact
+		padding-top: gem(80)
+	.contact_main
+		flex-direction: column
+		.contact_main_part_one
+			background: none
+			padding-top: gem(160)
+			padding-bottom: gem(160)
+			h1, p
+				padding-left: 0
+				margin: auto gem(20)
+				width: auto
+				text-align: center
+			img
+				width: gem(240)
+				left: 50%
+				margin-left: gem(-120)
+				bottom: gem(-200)
+		.contact_main_part_two
+			padding-bottom: gem(80)
+			padding-top: 0
+			.contact-form
+				margin-left: 0
+				margin: auto gem(20)
+				form
+					.double-input
+						flex-direction: column
+					.solo-input, .double-input
+						label 
+							width: 100%
+							input, textarea
+								width: 100%
+								margin-right: gem(20)
+						.submit-button
+							text-align: center
+							margin: auto
+							margin-top: gem(40)

@@ -9,7 +9,7 @@
 			margin-top: gem(360)
 			p
 				margin-top: gem(20)
-				width: gem(434)
+				max-width: gem(434)
 				opacity: 0.8
 		.why_main_right
 			margin-top: gem(234)
@@ -100,3 +100,62 @@
 			margin-top: gem(240)
 		p
 			width: gem(486)
+@media only screen and (max-width : 1024px)
+	.why_main
+		padding-bottom: gem(80)
+		.why_main_container
+			flex-direction: column
+			flex-flow: wrap
+			.why_main_left
+				order: 2
+				margin-top: gem(50)
+				h1
+					max-width: 70%
+					margin: auto
+					text-align: center
+				p
+					text-align: center
+					margin: auto
+					max-width: 90%
+					margin-top: gem(20)
+					
+			.why_main_right 
+				margin-top: gem(140)
+				text-align: center
+				
+				img
+					margin-left: auto
+					width: 90%
+					max-width: gem(600)
+	.text_and_photo_block
+		flex-direction: column
+		.content_right , .content_left
+			margin-left: gem(20)
+			order: -1
+			margin-right: gem(20)
+			h2
+				margin-top: gem(80)
+			h2 , p
+				width: auto
+		.photo_left
+			order: 2
+			flex-direction: column
+			align-items: flex-end
+			justify-content: flex-end
+			margin-top: gem(32)
+			text-align: right
+			img
+				&:nth-child(1)
+					width: 73%
+					right: 0
+					bottom: auto
+					top: auto
+					margin-top: 0
+					position: relative
+					margin-bottom: gem(80)
+				&:nth-child(2)
+					width: gem(240)
+					margin-top: 0
+					margin-left: auto
+					right: gem(75)
+					top: auto

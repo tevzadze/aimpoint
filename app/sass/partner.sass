@@ -1,0 +1,135 @@
+.partner_top_section
+	background: var(--grad-blue-dark-blue)	
+	.partner_top_content
+		display: flex
+		flex-direction: row
+		.partner_logo_side
+			width: gem(490)
+			margin-top: gem(283)
+			p
+				color: #fff
+				
+			.parnter-none
+				opacity: 0
+		.partner_text_side
+			margin-bottom: gem(226)
+			p
+				max-width: gem(556)
+				&:nth-child(1)
+					margin-top: gem(280)
+					margin-bottom: gem(80)
+			a
+				top: gem(-20)
+.partner_block_two
+	background: #F5F9FC
+	overflow: hidden
+	padding-bottom: gem(160)
+	padding-top: gem(160)
+	img
+		position: absolute
+		width: gem(384)
+		&:nth-child(1)
+			top: gem(-100)
+			left: gem(-260)
+		&:nth-child(3)
+			bottom: gem(-290)
+			right: gem(-100)
+	h2
+		text-align: center
+		max-width: gem(800)
+		margin: auto
+	p
+		max-width: gem(546)
+		margin: auto
+		text-align: center
+		
+		margin-top: gem(20)
+.partner_block_three
+	padding: gem(160) gem(0)
+	h3
+		width: 100%
+		text-align: center
+		margin-bottom: gem(58)
+	.partner_icons_block
+		display: flex
+		flex-direction: row
+		justify-content: center
+		&:not(:last-child)
+			margin-bottom: gem(86)
+		.partner_icon_cart
+			text-align: center
+			width: gem(220)
+			height: gem(130)
+
+			p
+				opacity: 1
+			&:not(:last-child)
+				margin-right: gem(80)
+.alterix_logo
+	width: gem(320)
+.aws_logo
+	width: gem(121)
+.snow_logo
+	width: gem(259)
+.tableau_logo
+	width: gem(310)
+@media all and (max-width: 1024px)
+	.alterix_logo
+		width: gem(210)
+	.aws_logo
+		width: gem(84)
+	.snow_logo
+		width: gem(203)
+	.tableau_logo
+		width: gem(246)
+	.partner_top_section
+		.partner_top_content
+			flex-direction: column
+			.partner_logo_side
+				width: auto
+				text-align: center
+				margin-top: gem(120)
+				p
+					text-align: center
+					
+			.partner_text_side
+				text-align: center
+				margin: auto
+				margin-bottom: gem(57)
+				p
+					&:nth-child(1)
+						margin-top: gem(40)
+	.partner_block_two
+		padding-top: gem(60)
+		padding-bottom: gem(60)
+		h2
+			max-width: 100%
+		img
+			&:nth-child(1)
+				width: gem(227)
+				left: 50%
+				top: gem(-185)
+			&:nth-child(3)
+				width: gem(227)
+				left: gem(-50)
+				bottom: gem(-185)
+	.partner_block_three
+		padding: gem(80) gem(0)
+		h3
+			font-size: gem(20)
+			line-height: gem(32)
+			margin-bottom: gem(20)
+		.partner_icons_block
+			flex-direction: column
+			align-items: center
+			&:not(:last-child)
+				margin-bottom: 0
+			.partner_icon_cart
+				max-width: gem(220)
+				height: auto
+				margin-bottom: gem(20)
+				&:not(:last-child)
+					margin-right: 0
+				p
+					font-size: gem(18)
+					line-height: gem(28)

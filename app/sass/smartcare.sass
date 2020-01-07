@@ -9,7 +9,7 @@
 		p
 			
 			margin-top: gem(20)
-			width: gem(524)
+			max-width: gem(524)
 		.smartcare-main-top-right
 			margin-left: gem(173)
 .smartcare-section_two
@@ -19,10 +19,15 @@
 	align-items: center
 	p
 		
-		width: gem(791)
+		max-width: gem(791)
+		margin: auto
 		margin-top: gem(20)
 		text-align: center
 		margin-bottom: gem(60)
+
+	h2
+		text-align: center
+		
 .smartcare-slick-carousel
 	display: flex
 	justify-content: center
@@ -40,9 +45,14 @@
 		.photo_block
 			width: 100%
 			height: 100%
-			background-image: url(../img/smrtcare/physicians&staff.png)
+			
 			background-size: cover
 			filter: brightness(70%) contrast(70%)
+			overflow: hidden
+			img
+				min-width: 200%
+				position: relative
+				bottom: 0
 		.text_block
 			position: absolute
 			bottom: 0
@@ -64,6 +74,9 @@
 			min-width: gem(360) !important
 			.photo_block
 				filter: brightness(100%) contrast(100%)
+				overflow: hidden
+				img
+					min-width: auto
 			.text_block
 				width: 100%
 				text-align: center
@@ -227,3 +240,128 @@
 .footer-smartcare
 	h2
 		margin-bottom: gem(40)
+@media all and (max-width: 1024px)
+	.smartcare-main 
+		.smartcare-main-top
+			flex-direction: column
+			flex-flow: wrap
+			padding-top: gem(210)
+			padding-bottom: gem(130)
+			.smartcare-main-top-right
+				order: -1
+				text-align: center
+				margin: auto
+				img
+					width: gem(240)
+					margin-bottom: gem(100)
+			.smartcare-main-top-left
+				text-align: center
+				max-width: 100%
+				margin: auto gem(15)
+	.smartcare-section_two
+		padding-top: gem(80)
+		h2
+			text-align: center
+		p
+			text-align: center
+			width: 100%
+			max-width: 100%
+
+	.smartcare-slick-carousel
+		.slick-list
+			left: auto
+			padding-top: gem(140) !important
+			overflow: hidden
+		.carousel-item ,.carousel-item.slick-center
+			height: auto
+			margin: auto !important
+			min-width: gem(320) !important
+			transform: scale(1) translateY(0)
+			.photo_block
+				filter: brightness(100%) contrast(100%)
+				overflow: hidden
+				width: 100%
+				img
+					width: 100%
+					min-width: auto
+			.text_block
+				width: 100%
+				text-align: center
+				top: gem(-150)
+				
+				
+				background: none
+				padding: gem(0)
+				padding-bottom: gem(10)
+				h3
+					font-size: gem(20)
+				p
+					font-size: gem(16)
+					text-align: center
+					width: 100%
+					line-height: gem(24)	
+		.slick-dots
+			bottom: gem(-40)
+	.smartcare-section-three
+		margin-top: gem(160)
+		.top_line 
+			p
+				margin-bottom: gem(20)
+		.smartcare_results
+			flex-direction: column
+			.smartcare_results_cart
+				width: 100%
+				height: auto
+				text-align: center
+				border: none
+				margin-bottom: gem(20)
+				img
+					top: gem(-40)
+					background: #33c8c3
+			&:nth-child(3)
+				padding-bottom: gem(80)
+
+	.smartcare-section-four , .smartcare-section-five ,.smartcare-section-six 
+		.smartcare-section-four-content , .smartcare-section-five-content , .smartcare-section-six-content
+			flex-flow: wrap
+			.photo_left
+				order: 2
+				flex-direction: column
+				align-items: flex-end
+				justify-content: flex-end
+				margin-top: gem(32)
+				text-align: right
+				margin-bottom: gem(80)
+				img
+					&:nth-child(1)
+						width: 73%
+						right: 0
+						bottom: auto
+						top: auto
+					&:nth-child(2)
+						width: gem(240)
+						margin-top: 0
+						margin-left: auto
+						right: gem(75)
+						top: auto
+			.content_right
+				margin-left: auto
+				margin-right: auto
+				h2
+					margin-top: gem(80)
+					margin-left: gem(20)
+				p
+					width: auto
+					margin-left: gem(20)
+					margin-right: gem(20)
+	.smartcare-section-four 
+		.top_line
+			margin-top: gem(80)
+			p
+				margin-left: gem(20)
+				margin-right: gem(20)
+	.smartcare-section-five , .smartcare-section-six
+		.smartcare-section-five-content ,.smartcare-section-six-content
+			.content_right
+				margin-top: gem(0)
+				margin-bottom: gem(0)

@@ -214,6 +214,9 @@
 			color: #030F2E
 			opacity: 1
 			font-weight: var(--font-weight-6)
+			span
+				display: none
+				font-weight: var(--font-weight-5)
 	.our-story-content
 		width: gem(588)
 		margin-left: gem(125)
@@ -221,3 +224,156 @@
 			font-size: gem(44)
 		p
 			top: gem(40)
+@media all and (max-width: 1024px)
+	.about-benefits-section
+		padding-top: gem(160)
+		padding-bottom: gem(0)
+		.hero-section-title
+			max-width: 100%
+		h1
+			font-size: gem(32)
+			line-height: gem(48)
+			text-align: center
+		.about-header-photo 
+			position: relative
+			text-align: right
+			display: flex
+			flex-direction: column
+			align-items: flex-end
+			
+			img
+				&:nth-child(2)
+					position: relative
+					z-index: 2
+					top: gem(-155)
+					width: 85%
+
+				&:nth-child(1)
+					position: relative
+					z-index: 1
+					width: gem(220)
+					right: gem(130)
+					top: gem(75)
+	.about-main-section
+		.about-main-section-one ,.about-main-section-two  , .about-main-section-three
+			margin-top: gem(80)
+			margin-bottom: gem(57)
+			flex-flow: wrap
+			.about-main-photo-one ,.about-main-photo-two
+				width: 100%
+				order: 2
+				flex-flow: wrap
+				flex-direction: column
+				align-items: flex-end
+				margin-right: 0
+				img
+					&:nth-child(1)
+						width: 73%
+						order: (-1)
+						right: 0
+					&:nth-child(2)
+						width: gem(230)
+						left: auto
+						right: gem(72)
+						margin-top: gem(-200)
+			h2 , p
+				right: auto
+			h2
+				width: 75%
+			p
+				font-size: gem(16)
+				line-height: gem(24)
+		.about-main-content-one ,.about-main-content-two
+			margin-left: gem(20)
+			margin-bottom: gem(32)
+		.about-main-section-three
+			.about-main-photo-one
+				img
+					&:nth-child(2)
+						margin-top: gem(-168)
+		.about-main-section-four 
+			padding-top: gem(80)
+			display: flex
+			flex-direction: column
+			h2
+				font-size: gem(20)
+				line-height: gem(32)
+				margin-bottom: gem(16)
+			.about-main-content-four
+				flex-direction: column
+				position: relative
+
+				.about-content-four-text
+					margin: gem(0) gem(20)
+					width: auto
+					position: relative
+					p
+						top: 0
+						font-size: gem(16)
+				.about-main-photo-four
+					width: 100%
+					order: 2
+					display: flex
+					flex-flow: wrap
+					flex-direction: column
+					justify-content: flex-end
+					align-items: flex-end
+					margin-right: 0
+					position: relative
+					margin-bottom: 0
+					img
+						&:nth-child(1)
+							width: 73%
+							order: (-1)
+							right: 0
+						&:nth-child(2)
+							width: gem(230)
+							left: auto
+							right: gem(72)
+
+							top: 0
+							margin-top: gem(-168)
+							margin-bottom: gem(50)
+	.our-story
+		position: relative
+		flex-direction: column
+		flex-flow: wrap
+		margin-top: gem(80)
+		padding-bottom: gem(80)
+		margin-bottom: 0
+		overflow: hidden
+		.our-story-content-left
+			order: 2
+			margin-top: gem(24)
+			position: relative
+			.small_text
+				span
+					display: inline
+			.our-story-two
+				width: gem(240)
+				position: absolute
+				bottom: gem(-275)
+				top: auto
+				left: auto
+				right: 0
+				margin-bottom: auto
+			.our-story-photo
+				padding-top: 0
+				margin: 0 gem(32)
+				background: none
+				
+
+		.our-story-content
+			margin-right: gem(20)
+			margin-left: gem(20)
+
+			p
+				font-size: gem(16)
+				line-height: gem(24)
+				top: auto
+				margin-top: gem(16)
+			h2
+				font-size: gem(20)
+				line-height: gem(32)
+				text-align: center
+				

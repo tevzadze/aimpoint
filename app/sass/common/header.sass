@@ -1,10 +1,11 @@
 .header
     display: block
-    position: absolute
+    position: fixed
     top: 0
     left: 0
     width: 100%
     z-index: 100
+    background: var(--grad-header)
     &.dark
         .logo-triangle
             fill: var(--color-green-logo)
@@ -54,29 +55,29 @@
     align-items: center
     justify-content: center
     min-height: gem(44)
-    &:after
-        position: absolute
-        content: ''
-        left: 0
-        bottom: gem(10)
-        width: 100%
-        height: 1px
-        background: var(--color-white)
-        opacity: 0
-        transition: opacity 300ms ease
-        pointer-events: none
+    &-link
+        transition: color 300ms ease
     &:hover
-        &:after
-            opacity: 1
+        .menu-item-link
+            color: var(--color-light-green)
+    &:active
+        .menu-item-link
+            color: var(--color-green)
     .menu-item-arrow
         position: absolute
         display: none
+        transform-origin: 50% 50%
+        transition: transform 300ms ease
     &.with-children
         padding-right: gem(16)
         .sub-menu
             display: flex
         &:hover
+            .menu-item-arrow
+                transform: rotateX(180deg)
             .menu-item-link
+                color: var(--color-white)
+                font-weight: bold
                 ~ .sub-menu
                     opacity: 1
                     visibility: visible
@@ -93,11 +94,12 @@
     align-items: center
     justify-content: flex-start
     flex-direction: column
-    width: gem(160)
+    width: max-content
     top: 0
-    padding-top: gem(60)
+    padding: gem(60) gem(16) gem(16)
     opacity: 0
     visibility: hidden
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) gem(44), var(--color-midnight-blue) gem(44), var(--color-midnight-blue) 100%)
     transition: all 300ms ease
 
 .sub-menu-item
@@ -105,22 +107,16 @@
     display: flex
     align-items: center
     transition: all 300ms ease
-    &:after
-        position: absolute
-        content: ''
-        left: 0
-        bottom: 0
-        width: 100%
-        height: 1px
-        background: var(--color-white)
-        opacity: 0
-        transition: opacity 300ms ease
-        pointer-events: none
+    &-link
+        transition: color 300ms ease
     &:hover
-        &:after
-            opacity: 1
+        .sub-menu-item-link
+            color: var(--color-light-green)
+    &:active
+        .sub-menu-item-link
+            color: var(--color-green)
     &:not(:last-child)
-        margin-bottom: gem(16)
+        margin-bottom: gem(12)
 
 .hamburger
     position: relative

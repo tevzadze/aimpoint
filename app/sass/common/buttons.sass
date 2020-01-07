@@ -10,29 +10,47 @@
     user-select: none
     box-shadow: none
     transition: all 300ms ease
+    &-text
+        transition: color 300ms ease
     &-border
         box-shadow: inset 0 0 0 1px var(--color-light-green)
         color: var(--color-light-green) !important
         padding: 0 gem(30)
         height: gem(44)
         &:hover
-            box-shadow: inset 0 0 0 3px var(--color-light-green)
+            box-shadow: none
+            color: var(--color-white) !important
+            background: var(--color-green)
+        &:active
+            box-shadow: none
+            color: var(--color-white) !important
+            background: var(--color-light-green)
     &-bg
         background: var(--color-light-green)
         height: gem(50)
         padding: 0 gem(59)
         &:hover
-            background: var(--color-light-lighten)
+            background: var(--color-green)
         &:active
-            background: var(--color-light-darken)
+            background: var(--color-light-green)
     &-arrow
         padding-right: gem(17)
-        line-height: gem(32)
+        .button-text
+            line-height: gem(32) !important
         &:hover
-            .button-icon
-                transform: translateX(gem(4))
+            .button-text
+                color: var(--color-light-green)
+            .arrow-path
+                fill: var(--color-light-green)
+        &:active
+            .button-text
+                color: var(--color-green)
+            .arrow-path
+                fill: var(--color-green)
         .button-icon
             position: absolute
             right: 0
             width: gem(9)
+        .arrow-path
             transition: all 300ms ease
+            fill: var(--color-light-green)

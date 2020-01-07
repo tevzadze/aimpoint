@@ -14,9 +14,9 @@
         margin-bottom: gem(40)
     &-image
         position: absolute
-        top: gem(105)
-        left: gem(836)
-        width: gem(582)
+        top: gem(145)
+        left: gem(866)
+        width: gem(522)
         height: auto
     .text-block
         display: flex
@@ -28,8 +28,7 @@
 
 .home-benefits-section
     background: var(--color-dark-blue)
-    min-height: gem(752)
-    padding-top: gem(60)
+    padding: gem(120) 0 gem(160)
     &-container
         display: flex
         flex-direction: column
@@ -44,8 +43,8 @@
     align-content: space-between
     justify-content: space-around
     flex-wrap: wrap
-    width: gem(960)
-    height: gem(444)
+    width: gem(1024)
+    height: gem(460)
 
 .benefits-item
     position: relative
@@ -56,32 +55,32 @@
     text-align: center
     width: gem(285)
     padding: gem(84) 0 gem(15)
-    transition: background-color 300ms ease
-    &:hover
-        background: var(--color-white)
-        .benefits-item-title
-            color: var(--color-dark-blue)
-        .benefits-item-subtitle
-            color: var(--color-dark-blue)
-        .benefits-item-image
-            .icon-path
-                fill: var(--color-dark-blue)
-        .button-arrow
-            color: var(--color-green)
+    // transition: background-color 300ms ease
+    // &:hover
+        // background: var(--color-white)
+        // .benefits-item-title
+        //     color: var(--color-dark-blue)
+        // .benefits-item-subtitle
+        //     color: var(--color-dark-blue)
+        // .benefits-item-image
+        //     .icon-path
+        //         fill: var(--color-dark-blue)
+        // .button-arrow
+        //     color: var(--color-green)
     &-title
         margin-bottom: gem(8)
-        transition: color 300ms ease
+        // transition: color 300ms ease
     &-subtitle
         margin: 0 auto gem(16)
         max-width: gem(242)
-        transition: color 300ms ease
+        // transition: color 300ms ease
     &-image
         position: absolute
         top: gem(24)
         width: gem(48)
         .icon-path
             fill: var(--color-white)
-            transition: fill 300ms ease
+            // transition: fill 300ms ease
 
 .industries-section
     padding: gem(160) 0

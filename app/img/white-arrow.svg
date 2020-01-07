@@ -1,19 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="9px" height="10px" viewBox="0 0 9 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
-    <title>arrow</title>
-    <desc>Created with Sketch.</desc>
-    <g id="HOME-+" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="home---design" transform="translate(-841.000000, -4000.000000)" fill="#FFFFFF" fill-rule="nonzero">
-            <g id="partners-block" transform="translate(0.000000, 3494.000000)">
-                <g id="partner-card" transform="translate(709.000000, 292.000000)">
-                    <g id="btn" transform="translate(40.000000, 206.000000)">
-                        <g id="Group-8" transform="translate(92.000000, 8.000000)">
-                            <path d="M6.31005051,4.3 L3.50502525,1.49497475 L4.49497475,0.505025253 L8.98994949,5 L4.49497475,9.49497475 L3.50502525,8.50502525 L6.31005051,5.7 L0,5.7 L0,4.3 L6.31005051,4.3 Z" id="arrow"></path>
-                        </g>
-                    </g>
-                </g>
-            </g>
-        </g>
-    </g>
+<svg class="button-icon" viewBox="0 0 9 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <path class="arrow-path" d="M6.31005051,4.3 L3.50502525,1.49497475 L4.49497475,0.505025253 L8.98994949,5 L4.49497475,9.49497475 L3.50502525,8.50502525 L6.31005051,5.7 L0,5.7 L0,4.3 L6.31005051,4.3 Z"></path>
 </svg>

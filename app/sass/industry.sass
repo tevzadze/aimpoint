@@ -1,0 +1,394 @@
+.industry-main-section
+	background: #F5F9FC
+	.industry-main-top
+
+		padding-top: gem(200)
+		display: flex
+		flex-direction: row
+		padding-bottom: gem(100)
+		h1
+			margin-top: gem(95)
+		p
+			
+			margin-top: gem(20)
+			max-width: gem(524)
+		.industry-main-top-right
+			margin-left: gem(173)
+
+.industry-section-two
+	text-align: center
+	margin-top: gem(160)
+	background: #fff
+	padding-bottom: gem(100)
+	.top_line
+		margin-bottom: gem(60)
+		h2
+			margin: auto
+			max-width: gem(770)
+	.industry_step
+		display: flex
+		flex-direction: row
+		justify-content: center
+		&.four
+			.industry_step_cart
+				&:not(:last-child)
+					margin-right: gem(22)
+				min-height: gem(248)
+		.industry_step_cart
+			border: 1px solid #25C8C4
+			border-radius: 2px
+			width: gem(284)
+			min-height: gem(224)
+			margin-bottom: gem(60)
+			padding: gem(32) gem(20) gem(20) gem(30)
+			text-align: left
+			transition: all 0.3s ease
+			&:not(:last-child)
+				margin-right: gem(75)
+			img
+				border: 1px solid #25C8C4
+				box-shadow: 0px 2px 4px rgba(51, 200, 195, 0.604294)
+				border-radius: 50%
+				background: rgba(51, 200, 195, 0)
+				padding: gem(13) gem(11) gem(14) gem(11)
+				position: relative
+				top: gem(-38)
+				transition: all 0.3s ease
+			p
+				margin-top: gem(-40)
+			&:hover
+				border: 1px solid #fff
+				box-shadow: 24px 32px 70px rgba(11, 20, 62, 0.117734)
+				img
+					background: rgba(51, 200, 195, 1)
+.industry-section-three
+	background: #082960
+	padding-top: gem(160)
+	padding-bottom: gem(160)
+	overflow: hidden
+	.top_line
+		text-align: center
+		margin-bottom: gem(36)
+		&.solo_line
+			p
+				font-size: gem(24)
+				max-width: gem(670)
+				opacity: 1
+		img
+			position: absolute
+			width: gem(384)
+			&:nth-child(1)
+				top: gem(-300)
+				left: gem(60)
+			&:nth-child(4) , &:nth-child(3)
+				bottom: gem(-292)
+				right: gem(-82)
+
+		p
+			margin: auto
+			max-width: gem(676)
+			margin-top: gem(20)
+			opacity: 0.8
+.industry-section-four
+	background: #fff
+	.content_left
+		margin-top: gem(160)
+		margin-right: gem(160)
+		margin-bottom: gem(0)
+		h2
+			width: gem(647)
+		p
+			width: gem(532)
+			margin-top: gem(20)
+		
+	.industry-section-four-content-link
+		margin-bottom: gem(160)
+		h3
+			width: gem(476)
+			margin-top: gem(80)
+	.more-button
+		margin-top: gem(40)
+		padding: gem(0) gem(70) gem(0) gem(67)
+		border-radius: 2px
+		&:hover
+			img
+				transform: translateX(gem(4))
+		img
+			width: gem(8)
+			margin-left: gem(14)
+			transition: all 0.3s ease
+	.photo_left
+		img
+			&:nth-child(1)
+				width: gem(585)
+				top: gem(160)
+			&:nth-child(2)
+				width: gem(384)
+				right: gem(240)
+				top: gem(290)
+.industry-section-five
+	padding: gem(160) gem(0)
+	background: #F5F9FC
+	position: relative
+	
+	h2
+		text-align: center
+		margin-bottom: gem(60)
+	a
+		color: #2FBBB8
+		opacity: 1
+		margin: auto
+		display: block
+		width: 100%
+		text-align: center
+		margin-top: gem(40)
+		transition: all 0.2s ease
+		&:hover
+			color: #06ABA6
+			text-decoration: underline
+	.pattern
+		position: absolute
+		width: gem(384)		
+		top: gem(200)
+		left: 50%
+		z-index: 1
+		margin-left: gem(100)
+
+	.industry-success
+		display: flex
+		flex-direction: row
+		justify-content: center
+		align-items: flex-end
+
+		.industry-success-cart
+			width: gem(385)
+			height: gem(280)
+			position: relative
+			overflow: hidden
+			display: flex
+			flex-direction: row
+			justify-content: flex-start
+			align-items: center
+			box-shadow: 4px 10px 32px rgba(82, 91, 148, 0.13833)
+			flex-flow: wrap
+			cursor: pointer	
+
+			img
+				z-index: 2
+				width: 100%
+				position: relative
+				bottom: 0
+				filter: brightness(70%) contrast(70%)
+			.small_p
+				position: absolute
+				bottom: 0
+				z-index: 2
+				width: 50%
+				background: #fff
+				padding: gem(16)
+				min-height: gem(130)
+			.industry-success-cart-text
+				display: none
+				
+				h3 , p
+					color: #fff
+
+			&.active
+				width: gem(792)
+				height: auto
+				min-height: gem(480)
+				background: #fff
+				order: -1
+				margin-right: gem(22)
+				cursor: default
+				.industry-success-cart-photo
+					width: 37%
+					text-align: center
+					height: 100%
+					z-index: 2
+					img
+						filter: brightness(100%) contrast(100%)
+						transform: scale(1.9,1.9)
+				.industry-success-cart-text
+					display: block
+					min-height: gem(480)
+					height: auto
+					max-width: 63%
+					padding: gem(20)
+					z-index: 3
+					background: #fff
+					h3 , p
+						color: var(--color-dark-grey)
+						transition: color 0.2s ease
+						opacity: 0.8
+
+					p
+						margin-top: gem(12)
+						span
+							font-weight: 900
+						&:nth-child(2)
+							margin-bottom: gem(4)
+							margin-top: gem(4)
+					
+				.small_p
+					display: none
+@media all and (max-width: 1024px)
+	.industry-main-section
+		.industry-main-top
+			flex-direction: column
+			flex-flow: wrap
+			padding-top: gem(130)
+			padding-bottom: gem(100)
+			h1
+				margin-top: gem(0)
+			p
+				max-width: gem(336)
+			.industry-main-top-right
+				order: -1
+				text-align: center
+				margin: auto
+				img
+					width: gem(266)
+					margin-bottom: gem(43)
+
+			.industry-main-top-left
+				text-align: center
+				max-width: 100%
+				margin: auto gem(15)
+	.industry-section-two
+		margin-top: gem(80)
+		padding-bottom: gem(80)
+		.top_line 
+			margin-bottom: 0
+			p
+				margin-bottom: gem(20)
+		.industry_step
+			flex-direction: column
+			&.four
+				.industry_step_cart
+					min-height: auto
+			.industry_step_cart
+				width: 100%
+				min-height: auto
+				text-align: center
+				border: none
+				margin-bottom: gem(20)
+				border: 0px solid #fff
+				&:hover
+					border: 0px solid #fff
+					box-shadow: none
+				img
+					background: rgba(51, 200, 195, 1)
+				p
+					margin: auto
+					max-width: gem(244)
+					margin-top: gem(-40)
+				img
+					top: gem(-40)
+					background: #33c8c3
+	.industry-section-three
+		padding: gem(80) gem(0)
+		.top_line
+			margin-bottom: gem(0)
+			&.solo_line
+				p
+					font-size: gem(20)
+					line-height: gem(32)
+					margin: gem(20)
+			img
+				&:nth-child(1)
+					width: gem(227)
+					left: 50%
+					top: gem(-170)
+					margin-left: gem(-113)
+				&:nth-child(4) , &:nth-child(3)
+					display: none	
+			p
+				max-width: gem(335)
+	.industry-section-four
+		.content_left
+			margin-top: gem(0)
+			margin-right: gem(18)
+			margin-left: gem(18)
+			margin-bottom: gem(0)
+			h2 , p 
+				width: 100%
+			h3
+				font-size: gem(20)
+				text-align: center
+		.photo_left
+			order: 2
+			flex-direction: column
+			align-items: flex-end
+			justify-content: flex-end
+			margin-top: gem(32)
+			text-align: right
+			img
+				&:nth-child(1)
+					width: 73%
+					right: 0
+					bottom: auto
+					top: auto
+					margin-top: 0
+					position: relative
+					margin-bottom: gem(0)
+				&:nth-child(2)
+					width: gem(240)
+					margin-top: 0
+					margin-left: auto
+					right: gem(75)
+					top: auto
+		.industry-section-four-content-link
+			display: flex
+			flex-direction: column
+			justify-content: center
+			margin-bottom: gem(80)
+			h3
+				width: 100%
+				font-size: gem(19)
+				text-align: center
+				margin-top: gem(70)
+			.more-button
+
+				margin: auto
+				margin-top: gem(40)
+				text-align: center
+	.industry-section-five
+		padding: gem(80) gem(0)
+		overflow: hidden
+		.pattern
+			top: auto
+			width: gem(227)
+			left: 50%
+			margin-left: gem(-114)
+			bottom: gem(40)
+		.industry-success
+			flex-direction: column
+			.industry-success-cart 
+				width: 100%
+				height: gem(200)
+				img
+					filter: brightness(100%) contrast(100%)
+				&:not(:last-child)
+					margin-bottom: gem(20)
+				.small_p
+					min-height: auto
+					width: 100%
+					text-align: center
+					padding: gem(25) gem(16)
+				&.active
+					width: 100%
+					min-height: auto
+					margin-right: 0
+					flex-direction: column
+					.industry-success-cart-photo
+						width: 100%
+						min-height: auto
+						height: gem(200)
+						img
+							transform: scale(1 ,1)
+					.industry-success-cart-text
+						max-width: 100%
+						h3
+							font-size: gem(20)
+							line-height: gem(32)

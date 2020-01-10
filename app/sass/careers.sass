@@ -1,0 +1,265 @@
+.careers-section-one
+	padding-top: gem(240)
+	padding-bottom: gem(160)
+	h1
+		text-align: center
+		font-family: var(--accent-font)
+	p
+		max-width: gem(843)
+		width: 100%
+		text-align: center
+		margin: auto
+	.career-header-photo
+		text-align: center
+		width: 100%
+		img
+			&:nth-child(1)
+				max-width: gem(1320)
+				margin-top: gem(96)
+				margin-bottom: gem(240)
+			&:nth-child(2)
+				display: none
+				
+.careers-section-two
+	background: #F5F9FC
+	padding: gem(160) gem(0)
+	.careers-section-two-content
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		.position-cart
+			width: gem(793)
+			border: 1px solid #C7D4DE
+			border-radius: 2px
+			padding: gem(32) gem(50) gem(24) gem(40)
+			&:not(:last-child)
+				margin-bottom: gem(8)
+			.position-cart-title
+				display: flex
+				flex-direction: row
+				p
+					font-family: var(--accent-font)
+					margin-left: gem(25)
+					opacity: 1
+				img
+					width: gem(16)
+			.position-cart-text
+				display: flex
+				flex-direction: row
+				justify-content: space-between
+				p
+					max-width: gem(480)
+					margin-left: gem(41)
+					margin-top: gem(4)
+		.position-mail
+			max-width: gem(728)
+			margin-top: gem(80)
+			text-align: center
+			a
+				color: #2FBBB8
+				opacity: 1
+				transition: all 0.2s ease
+				&:hover
+					color: #06ABA6
+					text-decoration: underline
+	h2
+		margin-bottom: gem(80)
+.careers-section-three
+	background: #fff
+	padding: gem(160) gem(0)
+	h2
+		width: 100%
+		text-align: center
+		margin-bottom: gem(50)
+.careers-slick-carousel
+	display: flex
+	justify-content: center
+	align-items: center
+	
+	.carousel-item
+		color: #000
+		transform: scale(0.7)
+		height: gem(320)
+		min-width: gem(320)
+		margin: gem(0) gem(40) !important
+		transition: all 0.3s ease
+		margin: gem(0) gem(15)
+		box-shadow: 0px 8px 60px rgba(41, 47, 83, 0.12)
+		.photo_block
+			width: 100%
+			height: 100%
+			
+			background-size: cover
+			filter: brightness(70%) contrast(70%)
+			overflow: hidden
+			img
+				min-width: 200%
+				position: relative
+				bottom: 0
+		.text_block
+			position: absolute
+			bottom: 0
+			padding: gem(19)
+			width: 84%
+			background: #fff
+			p
+				width: auto
+				text-align: left
+				margin-top: gem(4)
+				font-size: gem(20)
+				line-height: gem(35)
+				margin-bottom: gem(0)
+		&.slick-center
+			height: gem(220)
+			transform: scale(1.6) translateY(gem(-72))
+			min-width: gem(360) !important
+			.photo_block
+				filter: brightness(100%) contrast(100%)
+				overflow: hidden
+				img
+					min-width: auto
+			.text_block
+				width: 100%
+				text-align: center
+				top: gem(-90)
+				background: none
+				padding: gem(0)
+				p
+					font-size: gem(15)
+					text-align: center
+					width: 100%
+					line-height: gem(22.5)		
+					font-weight: 800
+	.slick-list
+		padding-top: gem(245) !important
+		padding-bottom: gem(100)
+		display: flex
+		flex-direction: row
+		left: gem(-20)
+	.slick-dots
+		bottom: gem(-22)
+		li
+			button
+				width: gem(10)
+				height: gem(10)
+
+.careers_section_four
+	padding: gem(160) gem(0)
+	h3
+		width: 100%
+		text-align: center
+		margin-bottom: gem(58)
+	.careers_icons_block
+		display: flex
+		flex-direction: row
+		justify-content: center
+		&:not(:last-child)
+			margin-bottom: gem(86)
+		.careers_icon_cart
+			text-align: center
+			width: gem(220)
+			height: gem(180)
+			img
+				width: gem(48)
+			p
+				opacity: 1
+				&:nth-child(2)
+					font-family: var(--accent-font)
+					font-weight: 900
+					margin-bottom: gem(8)
+			&:not(:last-child)
+				margin-right: gem(80)
+	
+@media all and (max-width: 1024px)
+	.careers-section-one
+		padding-top: gem(160)
+		padding-bottom: gem(80)
+		.career-header-photo
+			img
+				&:nth-child(1)
+					display: none
+					
+				&:nth-child(2)
+					display: block
+					margin-top: gem(117)
+	.careers-section-two 
+		padding-top: gem(80)
+		padding-bottom: gem(80)
+		.careers-section-two-content 
+			.position-mail
+				margin-top: gem(40)
+			.position-cart
+				width: 100%
+				padding: gem(15)
+				.position-cart-title
+					p
+						margin-left: gem(16)
+					img
+						width: gem(12)
+				.position-cart-text
+					flex-direction: column
+					p
+						margin-left: gem(28)
+						max-width: auto
+					a
+						margin: auto
+						margin-top: gem(24)
+						width: gem(120)
+	.careers-section-three
+		padding: gem(80) gem(0)
+		h2
+			margin-bottom: gem(40)
+	.careers-slick-carousel
+		.slick-list
+			left: auto
+			padding-top: gem(120) !important
+			overflow: hidden
+		.carousel-item ,.carousel-item.slick-center
+			height: auto
+			margin: auto !important
+			min-width: gem(320) !important
+			transform: scale(1) translateY(0)
+			.photo_block
+				filter: brightness(100%) contrast(100%)
+				overflow: hidden
+				width: 100%
+				img
+					width: 100%
+					min-width: auto
+			.text_block
+				width: 100%
+				text-align: center
+				top: gem(-120)
+				
+				
+				background: none
+				padding: gem(0)
+				padding-bottom: gem(10)
+				p
+					font-size: gem(16)
+					text-align: center
+					width: 100%
+					line-height: gem(24)	
+		.slick-dots
+			bottom: gem(-40)
+	.careers_section_four
+		padding: gem(80) gem(0)
+		h3
+			font-size: gem(20)
+			line-height: gem(32)
+			margin-bottom: gem(20)
+		.careers_icons_block
+			flex-direction: column
+			align-items: center
+			&:not(:last-child)
+				margin-bottom: 0
+			.careers_icon_cart
+				max-width: gem(220)
+				height: auto
+				margin-bottom: gem(20)
+				&:not(:last-child)
+					margin-right: 0
+				p
+					font-size: gem(18)
+					line-height: gem(28)

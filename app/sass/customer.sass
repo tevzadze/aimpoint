@@ -1,0 +1,55 @@
+.customer-section-one
+	overflow: hidden
+	.customer-section-top
+		display: flex
+		flex-direction: column
+		align-items: center
+		margin-top: gem(240)
+		margin-bottom: gem(160)
+		h1
+			color: #020F30
+			
+			font-size: gem(56)
+
+		p
+			color: #04102D
+			margin-top: gem(20)
+			width: gem(683)
+.customer-section-slider			
+	.slick-slider
+
+		/* this is really important~!!!! */
+		position: relative
+		
+
+	.wrapper 
+		width: 728px
+		margin: 0 auto
+		margin-bottom: 30px
+		padding: 10px
+		background: white
+
+	.carousel 
+		/* stub */
+
+	.carousel .item 
+		display: inline-block
+		padding: 5px 0
+		margin: 0 10px
+		background:#222
+		width:116px
+		height:30px
+		color: #fff
+		cursor: pointer
+
+@media all and (max-width: 1024px)
+	.customer-section-one
+		.customer-section-top
+			margin: auto gem(20)
+			margin-top: gem(160)
+			margin-bottom: gem(320)
+			h1
+				font-size: gem(32)
+				line-height: gem(48)
+			p
+				width: 100%

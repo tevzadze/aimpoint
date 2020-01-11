@@ -15,41 +15,146 @@
 			color: #04102D
 			margin-top: gem(20)
 			width: gem(683)
-.customer-section-slider			
-	.slick-slider
+.customer-section-slider	
 
-		/* this is really important~!!!! */
-		position: relative
-		
-
-	.wrapper 
-		width: 728px
-		margin: 0 auto
-		margin-bottom: 30px
-		padding: 10px
-		background: white
-
-	.carousel 
-		/* stub */
-
-	.carousel .item 
-		display: inline-block
-		padding: 5px 0
-		margin: 0 10px
-		background:#222
-		width:116px
-		height:30px
-		color: #fff
+	.js-small-next , .js-main-next
+		width: auto
+		background: none
+		outline: none
+		border: none
 		cursor: pointer
+		position: absolute
+		bottom: gem(100)
+		right: 0
+		left: auto
+		img
+			width: gem(36)
+			display: block
+			cursor: pointer
+			transform: rotate(0deg)
+	
+	.js-small-prev , .js-main-prev 
+		width: auto
+		background: none
+		outline: none
+		border: none
+		cursor: pointer
+		position: absolute
+		left: 0
+		bottom: gem(100)
+		img
+			width: gem(36)
+			display: block
+			cursor: pointer
+			transform: rotate(180deg)
+	.js-main-prev , .js-main-next
+		display: none
+		margin-top: gem(50)
+		left: gem(100)	
+		bottom: auto		
+		img
+			width: gem(24)
+		&:last-child
+			left: auto
+			right: gem(100)
+
+	.carousel-stories
+		max-width: gem(1000)		
+		margin: auto
+		margin-top: gem(40)
+		text-align: center
+		margin-bottom: gem(240)
+				
+		.slick-dots
+			bottom: gem(-22)
+		.item
+
+			.item-small-block		
+				margin: gem(20)
+				position: relative
+				border-radius: gem(2)
+				box-shadow: gem(4) gem(10) gem(32) rgba(82, 91, 148, 0.13833)
+				cursor: pointer
+				height: gem(206)
+				overflow: hidden
+				p
+					padding: gem(12) gem(16)
+					position: absolute
+					bottom: 0
+					left: 0
+					background: #fff
+					width: 78%
+					text-align: left
+				img
+					filter: brightness(70%) contrast(70%)
+					transition: all 0.3s ease
+					height: 100%
+					width: 100%
+				&:hover
+					img
+						filter: brightness(100%) contrast(100%)
+													
+	.js-slick-main
+		max-width: gem(960)
+		margin: auto
+		.stiries-item-block
+			display: flex
+			flex-direction: row
+			max-width: gem(960)
+			height: gem(414)
+			.item-photo-left
+				width: gem(400)
+				display: flex
+				justify-content: center
+				align-items: center
+				overflow: hidden
+				img
+					height: 100%
+					width: auto
+					transform: scale(1.5 , 1)
+			.item-text-right
+				max-width: gem(580)
+				padding: gem(20)
+				h3
+					margin-bottom: gem(4)
+				p
+					margin-top: gem(12)
+					span
+						font-weight: 900
+					&:nth-child(2)
+						margin-bottom: gem(4)
+						margin-top: gem(4)
 
 @media all and (max-width: 1024px)
 	.customer-section-one
 		.customer-section-top
 			margin: auto gem(20)
 			margin-top: gem(160)
-			margin-bottom: gem(320)
+			margin-bottom: gem(80)
 			h1
 				font-size: gem(32)
 				line-height: gem(48)
 			p
 				width: 100%
+				margin-top: gem(16)
+	.customer-section-slider
+		padding-bottom: gem(160)
+		.js-main-prev , .js-main-next
+			display: inline-block
+		.js-slick-main
+
+			.stiries-item-block
+				flex-direction: column
+				width: auto
+				height: auto
+				.item-photo-left
+					width: auto
+					height: auto
+					max-height: gem(160)
+					img
+						height: auto
+						transform: scale(1)
+	.carousel-stories , .js-small-prev , .js-small-next
+		display: none !important
+	
+			

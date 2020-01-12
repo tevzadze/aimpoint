@@ -204,11 +204,15 @@
 				.industry-success-cart-photo
 					width: 37%
 					text-align: center
+					min-height: gem(480)
 					height: 100%
 					z-index: 2
+					display: flex
+					justify-content: center
+					align-items: center
 					img
 						filter: brightness(100%) contrast(100%)
-						transform: scale(1.9,1.9)
+						transform: scale(2.3,2.3)
 				.industry-success-cart-text
 					display: block
 					min-height: gem(480)
@@ -367,6 +371,9 @@
 			.industry-success-cart 
 				width: 100%
 				height: gem(200)
+				.industry-success-cart-photo
+					width: 100%
+
 				img
 					filter: brightness(100%) contrast(100%)
 				&:not(:last-child)
@@ -389,6 +396,7 @@
 							transform: scale(1 ,1)
 					.industry-success-cart-text
 						max-width: 100%
+						min-height: auto
 						h3
 							font-size: gem(20)
 							line-height: gem(32)

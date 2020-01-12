@@ -1,7 +1,9 @@
-.about-benefits-section
+.about-top-section
+
+	overflow: hidden
 	background: var(--grad-blue-dark-blue)
 	padding-top: gem(347)
-	padding-bottom: gem(393)
+	padding-bottom: gem(373)
 	h1
 		font-size: gem(60)
 		line-height: gem(80)
@@ -11,91 +13,65 @@
 				position: absolute
 				right: gem(0)
 				top: gem(260)
-				width: gem(860)
+				width: gem(790)
 			&:nth-child(1)
 				position: absolute
 				right: gem(441)
-				top: gem(390)
+				top: gem(350)
 				width: gem(414)
 
-.about-main-section
-	overflow-x: hidden
-	p
-		font-size: var(--font-size-desc1)
-		mix-blend-mode: normal
-		opacity: 0.8
-		color: #030F2E
-		line-height: gem(32)
-		position: relative
-		top: gem(20)
-		padding-bottom: gem(20)
-	h2
-		position: relative
-	.about-main-section-one
-		width: 100%
-		margin-bottom: gem(160)
-		margin-top: gem(160)
-		display: flex
-		flex-direction: row
-		align-items: center
-		justify-content: left
-		h2
-			max-width: gem(445)
 
-			right: gem(-50)
-		p
-			max-width: gem(486)
-			right: gem(-50)
+.about-main-section-one
+	width: 100%
+	margin-bottom: gem(160)
+	margin-top: gem(160)
+	display: flex
+	flex-direction: row
+	align-items: center
+	overflow: hidden
+	justify-content: left
+	h2
+		max-width: gem(445)
+		right: gem(-50)
+		margin-bottom: gem(20)
+	p
+		max-width: gem(486)
+		right: gem(-50)
 
 			
-	.about-main-photo-one
-		
-		display: -webkit-flex
-		display: -moz-flex
-		display: -ms-flex
-		display: -o-flex
-		display: flex
-		flex-direction: row
-		align-items: center
-		margin-right: gem(-220)
-		img
-			display: inline-block
-			position: relative
-			&:nth-child(1)
-				width: gem(483)
-				z-index: 2
-				box-shadow: 0px 8px 60px rgba(41, 47, 83, 0.170536)
-				
-			&:nth-child(2)
-
-				z-index: 1
-
-				left: gem(-340)
-				width: gem(384)
-	.about-main-section-two
-		width: 100%
-		display: -webkit-flex
-		display: -moz-flex
-		display: -ms-flex
-		display: -o-flex
-		display: flex
-		flex-direction: row
-		align-items: center
-		
-		justify-content: flex-end
-		h2
-			max-width: gem(498)
-
-			right: gem(120)
-		p
-			max-width: gem(500)
-
-			right: gem(120)
+.about-main-photo-one
+	display: flex
+	flex-direction: row
+	align-items: center
+	margin-right: gem(-220)
+	overflow: hidden
+	img
+		display: inline-block
+		position: relative
+		&:nth-child(1)
+			width: gem(483)
+			z-index: 2
+			box-shadow: 0px 8px 60px rgba(41, 47, 83, 0.170536)
+			
+		&:nth-child(2)
+			z-index: 1
+			left: gem(-340)
+			width: gem(384)
+.about-main-section-two
+	width: 100%
+	display: flex
+	flex-direction: row
+	align-items: center
+	justify-content: flex-end
+	overflow: hidden
+	h2
+		max-width: gem(498)
+		margin-right: gem(120)
+	p
+		max-width: gem(500)
+		margin-right: gem(120)
+		margin-top: gem(20)
 	.about-main-photo-two
-		display: -webkit-flex
-		display: -moz-flex
-		display: -ms-flex
-		display: -o-flex
 		display: flex
 		flex-direction: row
 		align-items: center
@@ -114,65 +90,66 @@
 				right: gem(670)
 				z-index: 1
 				width: gem(384)
-	.about-main-section-three
-		width: 100%
-		margin-bottom: gem(120)
-		margin-top: gem(160)
+.about-main-section-three
+	width: 100%
+	margin-bottom: gem(120)
+	margin-top: gem(160)
+	display: flex
+	flex-direction: row
+	align-items: center
+	justify-content: left
+	overflow: hidden
+	h2
+		max-width: gem(489)
+		right: gem(-50)
+	p
+		max-width: gem(486)
+		right: gem(-50)
+		margin-top: gem(20)
+	.about-main-photo-one
+		img
+			&:nth-child(1)
+				width: gem(687)
+			&:nth-child(2)
+				width: gem(384)
+.about-main-section-four
+	background: #082960
+	padding-top: gem(160)
+	h2, p
+		color: #fff
+	h2
+		font-size: gem(44)
+		font-weight: var(--font-weight-5)
+		text-align: center
+		margin-bottom: gem(80)
+		font-family: var(--sub-font)
+	p
+		opacity: 0.8
+		margin-bottom: gem(20)
+		&:last-child
+			margin-bottom: gem(0)
+	.about-main-content-four
 		display: flex
 		flex-direction: row
-		align-items: center
-		justify-content: left
-		h2
-			max-width: gem(489)
-			right: gem(-50)
-		p
-			max-width: gem(486)
-			right: gem(-50)
-		.about-main-photo-one
+		align-items: top
+		justify-content: flex-end
+		.about-content-four-text
+			width: gem(588)
+			margin-right: gem(125)
+		.about-main-photo-four
+			max-width: gem(686)
+			margin-bottom: gem(-277)
 			img
+				position: relative
 				&:nth-child(1)
-					width: gem(687)
+					width: gem(686)
+					box-shadow: 24px 32px 70px rgba(11, 20, 62, 0.117734)
+					z-index: 2
 				&:nth-child(2)
-					width: gem(384)
-	.about-main-section-four
-		background: #082960
-		padding-top: gem(160)
-
-		h2, p
-			color: #fff
-		h2
-			font-size: gem(44)
-			font-weight: var(--font-weight-5)
-			text-align: center
-			margin-bottom: gem(80)
-			font-family: var(--sub-font)
-		.about-main-content-four
-			display: -webkit-flex
-			display: -moz-flex
-			display: -ms-flex
-			display: -o-flex
-			display: flex
-			flex-direction: row
-			align-items: top
-			justify-content: flex-end
-			.about-content-four-text
-				width: gem(588)
-				margin-right: gem(125)
-			.about-main-photo-four
-				max-width: gem(686)
-				margin-bottom: gem(-277)
-				img
-					position: relative
-					
-					&:nth-child(1)
-						width: gem(686)
-						box-shadow: 24px 32px 70px rgba(11, 20, 62, 0.117734)
-						z-index: 2
-					&:nth-child(2)
-						width: gem(413)
-						margin-left: gem(78)
-						top: gem(-360)
-						z-index: 1
+					width: gem(413)
+					margin-left: gem(78)
+					top: gem(-360)
+					z-index: 1
 .our-story
 	margin-top: gem(160)
 	display: -webkit-flex
@@ -223,9 +200,10 @@
 		h2
 			font-size: gem(44)
 		p
-			top: gem(40)
+			margin-top: gem(40)
+
 @media all and (max-width: 1024px)
-	.about-benefits-section
+	.about-top-section
 		padding-top: gem(160)
 		padding-bottom: gem(0)
 		.hero-section-title
@@ -254,7 +232,7 @@
 					width: gem(220)
 					right: gem(130)
 					top: gem(75)
-	.about-main-section
+	body
 		.about-main-section-one ,.about-main-section-two  , .about-main-section-three
 			margin-top: gem(80)
 			margin-bottom: gem(57)
@@ -268,7 +246,8 @@
 				margin-right: 0
 				img
 					&:nth-child(1)
-						width: 73%
+						width: 50%
+
 						order: (-1)
 						right: 0
 					&:nth-child(2)
@@ -277,15 +256,22 @@
 						right: gem(72)
 						margin-top: gem(-200)
 			h2 , p
-				right: auto
+				margin-right: auto
+				width: auto
 			h2
 				width: 75%
-			p
-				font-size: gem(16)
-				line-height: gem(24)
+		.about-main-section-one , .about-main-section-two
+			margin-bottom: gem(0)
+			justify-content: flex-start
+			h2
+				margin-right: auto
+				margin-left: 0
+				text-align: left
 		.about-main-content-one ,.about-main-content-two
 			margin-left: gem(20)
 			margin-bottom: gem(32)
+		
+			
 		.about-main-section-three
 			.about-main-photo-one
 				img
@@ -321,6 +307,7 @@
 					margin-right: 0
 					position: relative
 					margin-bottom: 0
+					margin-top: gem(32)
 					img
 						&:nth-child(1)
 							width: 73%
@@ -361,6 +348,7 @@
 				padding-top: 0
 				margin: 0 gem(32)
 				background: none
+				margin-bottom: gem(20)
 				
 
 		.our-story-content
@@ -376,4 +364,10 @@
 				font-size: gem(20)
 				line-height: gem(32)
 				text-align: center
-				
+@media all and (max-width: 768px)
+	body
+		.about-main-section-one ,.about-main-section-two  , .about-main-section-three
+			.about-main-photo-one ,.about-main-photo-two
+				img
+					&:nth-child(1)
+						width: 73%

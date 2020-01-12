@@ -107,7 +107,7 @@
 				width: auto
 				text-align: left
 				margin-top: gem(4)
-				font-size: gem(20)
+				font-size: gem(18)
 				line-height: gem(35)
 				margin-bottom: gem(0)
 		&.slick-center
@@ -119,6 +119,7 @@
 				overflow: hidden
 				img
 					min-width: auto
+					width: 100%
 			.text_block
 				width: 100%
 				text-align: center
@@ -126,7 +127,7 @@
 				background: none
 				padding: gem(0)
 				p
-					font-size: gem(15)
+					font-size: gem(13)
 					text-align: center
 					width: 100%
 					line-height: gem(22.5)		
@@ -176,12 +177,15 @@
 		padding-top: gem(160)
 		padding-bottom: gem(80)
 		.career-header-photo
+			text-align: center
+			
 			img
 				&:nth-child(1)
 					display: none
 					
 				&:nth-child(2)
 					display: block
+					margin: auto
 					margin-top: gem(117)
 	.careers-section-two 
 		padding-top: gem(80)
@@ -215,11 +219,13 @@
 			left: auto
 			padding-top: gem(120) !important
 			overflow: hidden
+			padding-bottom: gem(20)
 		.carousel-item ,.carousel-item.slick-center
 			height: auto
 			margin: auto !important
 			min-width: gem(320) !important
 			transform: scale(1) translateY(0)
+			box-shadow: none
 			.photo_block
 				filter: brightness(100%) contrast(100%)
 				overflow: hidden

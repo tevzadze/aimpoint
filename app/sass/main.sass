@@ -140,7 +140,7 @@ button[type='submit']
             text-align: right
             img
                 &:nth-child(1)
-                    width: 73%
+                    width: 50%
                     right: 0
                     bottom: auto
                     top: auto
@@ -158,7 +158,12 @@ button[type='submit']
 
     .s-visible
         display: block
-
+@media only screen and (max-width : 768px)
+    .text_and_photo_block
+        .photo_left
+            img
+                &:nth-child(1)
+                    width: 73%
 @media only screen and (max-width : 480px)
 
     body

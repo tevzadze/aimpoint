@@ -1,4 +1,5 @@
 .smartcare-main
+	overflow: hidden
 	background: #F5F9FC
 	.smartcare-main-top
 
@@ -13,6 +14,7 @@
 		.smartcare-main-top-right
 			margin-left: gem(173)
 .smartcare-section_two
+	overflow: hidden
 	padding-top: gem(160)
 	display: flex
 	flex-direction: column
@@ -105,6 +107,7 @@
 				height: gem(10)
 
 .smartcare-section-three
+	overflow: hidden
 	text-align: center
 	margin-top: gem(240)
 	.top_line
@@ -150,6 +153,7 @@
 				img
 					background: rgba(51, 200, 195, 1)
 .smartcare-section-four
+	overflow: hidden
 	background: #082960
 	.top_line
 		text-align: center
@@ -185,6 +189,7 @@
 				opacity: 0.8
 				margin-top: gem(20)
 .smartcare-section-five
+	overflow: hidden
 	background: #F5F9FC
 	.smartcare-section-five-content
 		display: flex
@@ -212,6 +217,7 @@
 					right: gem(155)
 					top: gem(304)
 .smartcare-section-six
+	overflow: hidden
 	.smartcare-section-six-content
 		display: flex
 		flex-direction: row
@@ -245,6 +251,7 @@
 	.smartcare-main 
 		.smartcare-main-top
 			flex-direction: column
+			justify-content: center
 			flex-flow: wrap
 			padding-top: gem(210)
 			padding-bottom: gem(130)
@@ -273,6 +280,7 @@
 			left: auto
 			padding-top: gem(140) !important
 			overflow: hidden
+			padding-bottom: 0
 		.carousel-item ,.carousel-item.slick-center
 			height: auto
 			margin: auto !important
@@ -316,6 +324,9 @@
 				text-align: center
 				border: none
 				margin-bottom: gem(20)
+				p
+					margin: auto
+					margin-top: gem(5)
 				img
 					top: gem(-40)
 					background: #33c8c3
@@ -333,9 +344,11 @@
 				margin-top: gem(32)
 				text-align: right
 				margin-bottom: gem(80)
+				width: 100%
 				img
 					&:nth-child(1)
-						width: 73%
+						width: 50%
+						left: auto
 						right: 0
 						bottom: auto
 						top: auto
@@ -368,3 +381,10 @@
 			.content_right
 				margin-top: gem(0)
 				margin-bottom: gem(0)
+@media all and (max-width: 768px)
+	.smartcare-section-four , .smartcare-section-five ,.smartcare-section-six 
+		.smartcare-section-four-content , .smartcare-section-five-content , .smartcare-section-six-content
+			.photo_left
+				img
+					&:nth-child(1)
+						width: 73%

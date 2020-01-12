@@ -1,4 +1,4 @@
-.why_main
+.why_main-section
 	background: var(--grad-blue-dark-blue)
 	padding-bottom: gem(202)
 	.why_main_container
@@ -101,11 +101,12 @@
 		p
 			width: gem(486)
 @media only screen and (max-width : 1024px)
-	.why_main
+	.why_main-section
 		padding-bottom: gem(80)
 		.why_main_container
 			flex-direction: column
 			flex-flow: wrap
+			justify-content: center
 			.why_main_left
 				order: 2
 				margin-top: gem(50)
@@ -146,7 +147,7 @@
 			text-align: right
 			img
 				&:nth-child(1)
-					width: 73%
+					width: 50%
 					right: 0
 					bottom: auto
 					top: auto
@@ -159,3 +160,9 @@
 					margin-left: auto
 					right: gem(75)
 					top: auto
+@media only screen and (max-width : 768px)
+    .text_and_photo_block
+        .photo_left
+            img
+                &:nth-child(1)
+                    width: 73%

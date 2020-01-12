@@ -1,4 +1,4 @@
-.our-tema-main
+.our-tema-main-section
 	overflow: hidden
 	.our-team-top
 		display: flex
@@ -17,117 +17,111 @@
 			width: gem(683)
 			
 
-	.our-team-content
-		position: relative
-		
+.our-team-content
+	position: relative
+	
+	display: flex
+	flex-direction: column
+	align-items: center
+	background: var(--color-light-gray)
+	padding-bottom: gem(80)
+	.our-team-pattern-left
+		position: absolute
+		left: gem(-303)
+		top: gem(120)
+		width: gem(384)
+	.our-team-pattern-right
+		position: absolute
+		right: gem(-110)
+		bottom: gem(340)
+		width: gem(384)
+	.our-team-container
 		display: flex
-		flex-direction: column
-		align-items: center
-		background: var(--color-light-gray)
-		padding-bottom: gem(80)
-		.our-team-pattern-left
-			position: absolute
-			left: gem(-303)
-			top: gem(120)
-			width: gem(384)
-		.our-team-pattern-right
-			position: absolute
-			right: gem(-110)
-			bottom: gem(340)
-			width: gem(384)
-		.our-team-container
+		flex-direction: row
+		&:nth-child(1)
+			margin-top: gem(-317)
+		.our-team-cart
+			margin: gem(0) gem(11)
+			margin-bottom: gem(67)
+			width: gem(385)
+			
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: column
+			box-shadow: 0px 8px 60px rgba(41, 47, 83, 0.170536)
+			border-radius: 2px
+			
+			&:nth-child(1)
+				margin-left: gem(0)
+			&:nth-child(3)
+				margin-right: gem(0)
+			p
+				color: #04102D
+			.our-team-cart-info-p-hidden
+				width: gem(250)
+				margin-right: (32)
+				margin-top: gem(12)
+			h3
+				color: #020F30
+			transition: all 0.3s ease
+			
+			.our-team-cart-photo
+				height: gem(317)
+				overflow: hidden
+				
+				img
+					width: 100%
+					
+					
+			.our-team-cart-info
+				padding: gem(20) gem(32) gem(20) gem(32)
+				background: #fff
+				cursor: pointer
+				z-index: 9
+				position: relative
+				
+				&:hover
+			
+					img
+						right: gem(28)
+				img
+					width: gem(16)
+					float:  right
+					right: gem(32)
+					
+					transition: all 0.3s ease 
+					position: absolute
+					bottom: gem(28)
+				.our-team-cart-info-p-hidden
+					display: none
+					transition: all 0.3s ease
+		.our-team-cart-small
+			width: gem(284)
+		.our-team-cart-active
 			display: flex
 			flex-direction: row
-			&:nth-child(1)
-				margin-top: gem(-317)
-
-			.our-team-cart
-				margin: gem(0) gem(11)
-				margin-bottom: gem(67)
-				width: gem(385)
+			transition: all 0.3s ease
+			width: gem(588)
+			.our-team-cart-photo
+				height: 100%
+				flex-grow: 1
 				
-				display: -webkit-flex
-				display: -moz-flex
-				display: -ms-flex
-				display: -o-flex
-				display: flex
-				flex-direction: column
-				box-shadow: 0px 8px 60px rgba(41, 47, 83, 0.170536)
-				border-radius: 2px
-				
-				&:nth-child(1)
-					margin-left: gem(0)
-				&:nth-child(3)
-					margin-right: gem(0)
-				p
-					color: #04102D
-				.our-team-cart-info-p-hidden
-					width: gem(250)
-					margin-right: (32)
-					margin-top: gem(12)
-				h3
-					color: #020F30
-				transition: all 0.3s ease
-				
-				.our-team-cart-photo
-					height: gem(317)
-					overflow: hidden
-					
-					img
-						width: 100%
-						
-						
-				.our-team-cart-info
-					padding: gem(20) gem(32) gem(20) gem(32)
-					background: #fff
-					cursor: pointer
-					z-index: 9
-					position: relative
-					
-					&:hover
-				
-						img
-							right: gem(28)
-					img
-						width: gem(16)
-						float: right
-						right: gem(32)
-						
-						transition: all 0.3s ease 
-						position: absolute
-						bottom: gem(28)
-					.our-team-cart-info-p-hidden
-						display: none
-						transition: all 0.3s ease
-			.our-team-cart-small
-				width: gem(284)
-			.our-team-cart-active
-				display: -webkit-flex
-				display: -moz-flex
-				display: -ms-flex
-				display: -o-flex
-				display: flex
-
-				flex-direction: row
-				transition: all 0.3s ease
-				width: gem(588)
-				.our-team-cart-photo
+				img
+					transform: scale( 1.15 , 1)
+					margin-top: gem(0)
 					height: 100%
-					flex-grow: 1
-					// padding-bottom: gem(13)
 					
-					img
-						margin-top: gem(0)
-						height: 100%
-						
-				.our-team-cart-info
-					padding-bottom: gem(0)
-					transition: all 0.3s ease
-					// margin-bottom: gem(13)
-					img
-						transform: rotate(-180deg)
-					.our-team-cart-info-p-hidden
-						display: block
+			.our-team-cart-info
+				padding-bottom: gem(0)
+				transition: all 0.3s ease
+				// margin-bottom: gem(13)
+				img
+					transform: rotate(-180deg)
+				.our-team-cart-info-p-hidden
+					display: block
 .our_team_setion_two
 	background: var(--color-dark-blue)
 	display: flex
@@ -146,7 +140,7 @@
 		margin-bottom: gem(40)
 
 @media all and (max-width: 1024px)
-	.our-tema-main 
+	.our-tema-main-section
 		.our-team-top
 			margin: auto gem(20)
 			margin-top: gem(160)
@@ -156,45 +150,50 @@
 				line-height: gem(48)
 			p
 				width: 100%
-		.our-team-content 
-			.our-team-pattern-left
-				display: none
-			.our-team-pattern-right
-				width: gem(240)
-				left: 50%
-				margin-left: gem(-120)
-				bottom: gem(-200)	
-			.our-team-container
-				flex-direction: column
+	.our-team-content 
+		.our-team-pattern-left
+			display: none
+		.our-team-pattern-right
+			width: gem(240)
+			left: 50%
+			margin-left: gem(-120)
+			bottom: gem(-200)	
+		.our-team-container
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			&:nth-child(1)
+				margin-top: 0
 				&:nth-child(1)
-					margin-top: 0
-					&:nth-child(1)
-							margin-top: gem(-260)
+					margin-top: gem(-260)
+			.our-team-cart
+				box-shadow: none
+				width: auto
+				margin-right: 0
+				margin-left: 0
 
-				.our-team-cart
-					box-shadow: none
-					width: auto
-					margin-right: 0
-					margin-left: 0
-					margin-bottom: gem(20)
-					.our-team-cart-photo
-						height: gem(260)
-					.our-team-cart-info
-						img
-							transform: rotate(90deg)
-				.our-team-cart-small
-					width: auto
-				.our-team-cart-active
-					width: auto
-					flex-direction: column
-					.our-team-cart-photo
-						height: gem(260)
-						img
-							height: auto
-					.our-team-cart-info
-						padding-bottom: gem(60)
-						img
-							transform: rotate(270deg)
+				margin-bottom: gem(20)
+				max-width: gem(400)
+				.our-team-cart-photo
+					height: gem(260)
+				.our-team-cart-info
+					img
+						transform: rotate(90deg)
+			.our-team-cart-small
+				width: auto
+
+			.our-team-cart-active
+				width: auto
+				flex-direction: column
+				.our-team-cart-photo
+					height: gem(260)
+					img
+						height: auto
+						transform: scale(1 ,1)
+				.our-team-cart-info
+					padding-bottom: gem(60)
+					img
+						transform: rotate(270deg)
 	.our_team_setion_two
 		padding-top: gem(80)
 		h2

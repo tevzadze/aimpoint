@@ -163,6 +163,8 @@ $('.industry-success-cart').on('click', function(argument) {
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,
+					fade: true,
+					cssEase: 'ease',
 					
 				}
 			},
@@ -184,6 +186,8 @@ $('.industry-success-cart').on('click', function(argument) {
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,
+					fade: true,
+					cssEase: 'ease',
 					
 				}
 			},
